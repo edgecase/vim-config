@@ -84,3 +84,6 @@
 
 " select the lines which were just pasted
   nnoremap vv `[V`]
+
+" clean up trailing whitespace
+  map <Leader>c :%s/\s\+$<cr>
