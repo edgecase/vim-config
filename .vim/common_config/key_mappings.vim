@@ -87,3 +87,6 @@
 
 " clean up trailing whitespace
   map <Leader>c :%s/\s\+$<cr>
+
+" shortcut to align text with Tabular
+  map <Leader>a :Tabular<space>
