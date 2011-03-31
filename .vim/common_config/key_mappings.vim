@@ -92,4 +92,4 @@
   map <Leader>a :Tabular<space>
 
 " delete all buffers
-  map <Leader>b :bufdo bd<cr>
+  map <Leader>d :bufdo bd<cr>
