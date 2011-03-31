@@ -13,9 +13,10 @@ function! CustomTabularPatterns()
   AddTabularPattern! symbols         / :/l0
   AddTabularPattern! hash            /=>/
   AddTabularPattern! chunks          / \S\+/l0
-  AddTabularPattern! assignment      /= /l1l0
+  AddTabularPattern! assignment      / = /l0
   AddTabularPattern! comma           /,\zs /l0
   AddTabularPattern! colon           /:\zs /l0
+  AddTabularPattern! options_hashes  /:\w\+ =>/
 endfunction
 autocmd VimEnter * call CustomTabularPatterns()
 
