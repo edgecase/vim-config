@@ -4,7 +4,8 @@ You should give it a try.
 
 ## Install
 
-    rake
+Just clone the directory somewhere and run `rake`.  This will symlink the necessary
+files to your home directory (asking for permission before clobbering anything).
 
 ## Customizing
 
