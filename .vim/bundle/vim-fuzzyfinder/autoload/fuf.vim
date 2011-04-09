@@ -151,8 +151,9 @@ endfunction
 
 "
 function fuf#openFile(path, mode, reuse)
-  let bufNr = bufnr('^' . a:path . '$')
-  if bufNr > -1
+  let bufNr     = bufnr('^' . a:path . '$')
+  let bufLoaded = bufloaded(bufNr)
+  if bufNr > -1 && bufLoaded > 0
     call fuf#openBuffer(bufNr, a:mode, a:reuse)
   else
     execute {
