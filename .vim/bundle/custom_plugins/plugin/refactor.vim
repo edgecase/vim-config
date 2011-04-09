@@ -13,5 +13,5 @@ function! Refactor(old, new)
   execute 'argdo set eventignore-=Syntax | ' . substitution . ' | update'
 endfunction
 
-command! -nargs=+ -complete=file Refactor call Refactor(<f-args>)
+command! -nargs=+ Refactor call Refactor(<f-args>)
 
