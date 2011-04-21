@@ -198,33 +198,33 @@ again.
 
 For instance, consider starting with the following lines:
 
-`>
+`
     Some short phrase,some other phrase
     A much longer phrase here,and another long phrase
-<`
+`
 
 Let's say we want to line these lines up at the commas.  We can tell
 Tabularize to do this by passing a pattern matching , to the Tabularize
 command:
 
-`>
+`
   :Tabularize /,
 
     Some short phrase         , some other phrase
     A much longer phrase here , and another long phrase
-<`
+`
 
 **Customizations**
 
 The following tabular patterns have been added:
 
-`symbols         / :/l0`
-`hash            /=>/`
-`chunks          / \S\+/l0`
-`assignment      / = /l0`
-`comma           /,\zs /l0`
-`colon           /:\zs /l0`
-`options_hashes  /:\w\+ =>/`
+* `symbols         / :/l0`
+* `hash            /=>/`
+* `chunks          / \S\+/l0`
+* `assignment      / = /l0`
+* `comma           /,\zs /l0`
+* `colon           /:\zs /l0`
+* `options_hashes  /:\w\+ =>/`
 
 
 ## indent\_object
