@@ -23,14 +23,65 @@ name of the currently logged-in user.
 You can add custom plugins by registering them in this custom config file with the same `Bundle "plugin-repo-url"`
 syntax used in the `.vim/common_config/plugin_config.vim`, and then performing steps 3 & 4 from the install steps above.
 
+## Basic key mappings
+
+TODO: forthcoming...
+
 ## FuzzyFinder
 
-FuzzyFinder provides convenient ways to quickly reach the
+Provides convenient ways to quickly reach the
 buffer/file/command/bookmark/tag you want. FuzzyFinder searches with the
 fuzzy/partial pattern to which it converted an entered pattern.
 
 * `<Leader>t` - fuzzy find files
-* `<Leader>b' - fuzzy find open buffers
+* `<Leader>b` - fuzzy find open buffers
+
+## Unimpaired
+
+Utility functions for working with lines, files, and elements.
+
+**Customizations**
+
+* `<C-Up>` - Move lines up through a file (works in normal or visual mode, and multiple lines)
+* `<C-Down>` - Move lines down through a file (works in normal or visual mode, and multiple lines)
+
+## Syntastic
+
+Syntastic is a syntax checking plugin that runs buffers through external syntax
+checkers as they are saved and opened. If syntax errors are detected, the user
+is notified and is happy because they didn't have to compile their code or
+execute their script to find them.
+
+## Gundo
+
+Awesome visual representation of `vim` undo tree.
+
+**Customizations**
+
+* `<Leader>h` - Toggle gundo
+
+## Search Complete
+
+Allows you to use tab-completion of words in the current buffer when searching.
+
+## T-Comment
+
+TComment works like a toggle, i.e., it will comment out text that 
+contains uncommented lines, and it will remove comment markup for 
+already commented text (i.e. text that contains no uncommented lines).
+
+If the file-type is properly defined, TComment will figure out which 
+comment string to use. Otherwise you use |TCommentDefineType()| to 
+override the default choice.
+
+TComment can properly handle an embedded syntax, e.g., ruby/python/perl 
+regions in vim scripts, HTML or JavaScript in php code etc.
+
+* `gc{motion}` - Toggle comments (for small comments within one line the &filetype_inline style will be used, if defined)
+* `gcc`        - Toggle comment for the current line
+* `gC{motion}` - Comment region
+* `gCc`        - Comment the current line
+
 
 ## ShowMarks
 
@@ -47,6 +98,51 @@ By default the following keymappings are defined:
 
 ShowMarks requires that Vim is compiled with the +signs feature. 
 
+## Fugitive
+
+I'm not going to lie to you; fugitive.vim may very well be the best
+Git wrapper of all time.  Check out these features:
+
+View any blob, tree, commit, or tag in the repository with `:Gedit` (and
+`:Gsplit`, `:Gvsplit`, `:Gtabedit`, ...).  Edit a file in the index and
+write to it to stage the changes.  Use `:Gdiff` to bring up the staged
+version of the file side by side with the working tree version and use
+Vim's diff handling capabilities to stage a subset of the file's
+changes.
+
+Bring up the output of `git status` with `:Gstatus`.  Press `-` to
+`add`/`reset` a file's changes, or `p` to `add`/`reset` `--patch` that
+mofo.  And guess what `:Gcommit` does!
+
+`:Gblame` brings up an interactive vertical split with `git blame`
+output.  Press enter on a line to reblame the file as it stood in that
+commit, or `o` to open that commit in a split.  When you're done, use
+`:Gedit` in the historic buffer to go back to the work tree version.
+
+`:Gmove` does a `git mv` on a file and simultaneously renames the
+buffer.  `:Gremove` does a `git rm` on a file and simultaneously deletes
+the buffer.
+
+Use `:Ggrep` to search the work tree (or any arbitrary commit) with
+`git grep`, skipping over that which is not tracked in the repository.
+`:Glog` loads all previous revisions of a file into the quickfix list so
+you can iterate over them and watch the file evolve!
+
+`:Gread` is a variant of `git checkout -- filename` that operates on the
+buffer rather than the filename.  This means you can use `u` to undo it
+and you never get any warnings about the file changing outside Vim.
+`:Gwrite` writes to both the work tree and index versions of a file,
+making it like `git add` when called from a work tree file and like
+`git checkout` when called from the index or a blob in history.
+
+Use `:Gbrowse` to open the current file on GitHub, with optional line
+range (try it in visual mode!).  If your current repository isn't on
+GitHub, `git instaweb` will be spun up instead.
+
+Add `%{fugitive#statusline()}` to `'statusline'` to get an indicator
+with the current branch in (surprise!) your statusline.
+
+Oh, and of course there's `:Git` for running any arbitrary command.
 
 
 ## Ruby focused unit test
@@ -142,17 +238,11 @@ ctag support. Tag navigation creates a stack which can traversed via
 `Ctrl-]` (to find the source of a token) and `Ctrl-T` (to jump back up
 one level).
 
-## Git Support (Fugitive)
+## Matchit / ruby-matchit
 
-Fugitive adds pervasive git support to git directories in vim. For more
-information, use `:help fugitive`
+Improves `vim` ability to jump back and forth between matching pairs of
+opening and ending items with `%`.
 
-Use `:Gstatus` to view `git status` and type `-` on any file to stage or
-unstage it. Type `p` on a file to enter `git add -p` and stage specific
-hunks in the file.
-
-Use `:Gdiff` on an open file to see what changes have been made to that
-file
 
 ## Gist-vim
 
@@ -176,7 +266,7 @@ HTML, and opens it in your default browser.
 
 **Customizations**: Binds `<Leader>mp` to this plugin.
 
-## Additional Syntaxes
+## Additional Syntaxes / Language Support
 
 Ships with a few additional syntaxes:
 
@@ -185,6 +275,9 @@ Ships with a few additional syntaxes:
 * Sass (bound to \*.sass)
 * SCSS (bound to \*.scss)
 * An improved JavaScript syntax (bound to \*.js)
+* Coffee Script
+* Erlang
+* Jade
 
 ## Color schemes
 
