@@ -96,3 +96,6 @@
 
 " delete all buffers
   map <Leader>d :bufdo bd<cr>
+
+" view tree history with Gundo
+  map <Leader>h :GundoToggle<CR>
