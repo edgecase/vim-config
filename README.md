@@ -23,6 +23,32 @@ name of the currently logged-in user.
 You can add custom plugins by registering them in this custom config file with the same `Bundle "plugin-repo-url"`
 syntax used in the `.vim/common_config/plugin_config.vim`, and then performing steps 3 & 4 from the install steps above.
 
+## FuzzyFinder
+
+FuzzyFinder provides convenient ways to quickly reach the
+buffer/file/command/bookmark/tag you want. FuzzyFinder searches with the
+fuzzy/partial pattern to which it converted an entered pattern.
+
+* `<Leader>t` - fuzzy find files
+* `<Leader>b' - fuzzy find open buffers
+
+## ShowMarks
+
+ShowMarks provides a visual representation of the location marks. 
+Marks are useful for jumping back and forth between interesting points in a buffer, but can be hard to keep track of without any way to see where you have placed them.  ShowMarks hopefully makes life easier by placing a sign in the leftmost column of the buffer.  The sign indicates the label of the mark and its location. 
+It can be toggled on and off and individual marks can be hidden(effectively removing them). 
+
+By default the following keymappings are defined: 
+
+* `<Leader>mt` - Toggles ShowMarks on and off. 
+* `<Leader>mh` - Hides an individual mark. 
+* `<Leader>ma` - Hides all marks in the current buffer. 
+* `<Leader>mm` - Places the next available mark. 
+
+ShowMarks requires that Vim is compiled with the +signs feature. 
+
+
+
 ## Ruby focused unit test
 
 Makes it easy to run a focused set of ruby tests from within `vim`.
@@ -141,7 +167,7 @@ Try `:Gist`, `:Gist -p` and visual blocks.
 When working with split windows, ZoomWin lets you zoom into a window and
 out again using `Ctrl-W o`
 
-**Customizations**: Janus binds `<Leader>z` to `:ZoomWin`
+**Customizations**: Binds `<Leader>z` to `:ZoomWin`
 
 ## Markdown Preview
 
