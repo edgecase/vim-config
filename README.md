@@ -2,12 +2,17 @@
 
 You should give it a try.
 
+## Pre-requisites
+
+This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim` 
+installations that are built with all of the `vim` features necessary to support the used plugins.
+
 ## Install
 
-1. git clone git://github.com/edgecase/vim-config.git
-2. rake (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
-3. vim
-4. :BundleInstall (This will clone and install all of the plugins from github.)
+1. `git clone git://github.com/edgecase/vim-config.git`
+2. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
+3. `vim`
+4. `:BundleInstall` (This will clone and install all of the plugins from github.)
 
 ## Customizing
 
