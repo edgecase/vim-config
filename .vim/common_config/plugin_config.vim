@@ -1,9 +1,11 @@
+" Plugins are managed by Vundle. Once VIM is open run :BundleInstall to
+" install plugins.
+
 " Plugins requiring no additional configuration or keymaps
   Bundle "git://github.com/vim-scripts/Align.git"
   Bundle "git://github.com/vim-scripts/Color-Sampler-Pack.git"
-  Bundle "git://github.com/oscarh/vimerl.git" "erlang
+  Bundle "git://github.com/oscarh/vimerl.git"
   Bundle "git://github.com/tpope/vim-git.git"
-  Bundle "git://github.com/vim-scripts/rubycomplete.vim.git"
   Bundle "git://github.com/harleypig/vcscommand.vim.git"
   Bundle "git://github.com/kchmck/vim-coffee-script.git"
   Bundle "git://github.com/altercation/vim-colors-solarized.git"
@@ -24,6 +26,7 @@
   Bundle "git://github.com/vim-scripts/SearchComplete.git"
   Bundle "git://github.com/tpope/vim-repeat.git"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
+  Bundle "git://github.com/wgibbs/vim-irblack.git"
 
 
 " ACK (TRAILING WHITESPACE IS INTENTIONAL)
@@ -36,13 +39,24 @@
     nmap gq :ccl<cr>
 
 
-" Ruby focused unit test
-  Bundle "git://github.com/drewolson/ruby_focused_unit_test_vim.git"
-    nmap <Leader>ra :wa<cr> :RunAllRubyTests<cr>
-    nmap <Leader>rc :wa<cr> :RunRubyFocusedContext<cr>
-    nmap <Leader>rf :wa<cr> :RunRubyFocusedUnitTest<cr>
-    nmap <Leader>rl :wa<cr> :RunLastRubyTest<cr>
+" Taglist-plus for navigation by tags using CTags
+  Bundle "git://github.com/int3/vim-taglist-plus.git"
+    let Tlist_WinWidth='auto'
 
+    map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+    map <C-\> :tnext<CR>
+    map <Leader>. :TlistToggle<CR>
+
+
+" Ruby focused unit test (wrapped in an if-loaded because it doesn't like
+" being loaded twice)
+  if !exists(':RunRubyFocusedUnitTest')
+    Bundle "git://github.com/drewolson/ruby_focused_unit_test_vim.git"
+      nmap <Leader>ra :wa<cr> :RunAllRubyTests<cr>
+      nmap <Leader>rc :wa<cr> :RunRubyFocusedContext<cr>
+      nmap <Leader>rf :wa<cr> :RunRubyFocusedUnitTest<cr>
+      nmap <Leader>rl :wa<cr> :RunLastRubyTest<cr>
+  endif
 
 " Markdown syntax highlighting
   Bundle "git://github.com/tpope/vim-markdown.git"
@@ -73,7 +87,9 @@
       AddTabularPattern! options_hashes  /:\w\+ =>/
     endfunction
 
-    autocmd VimEnter * call CustomTabularPatterns()
+    if exists('g:loaded_tabular')
+      autocmd VimEnter * call CustomTabularPatterns()
+    endif
 
     " shortcut to align text with Tabular
     map <Leader>a :Tabular<space>
