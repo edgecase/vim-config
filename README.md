@@ -23,6 +23,29 @@ name of the currently logged-in user.
 You can add custom plugins by registering them in this custom config file with the same `Bundle "plugin-repo-url"`
 syntax used in the `.vim/common_config/plugin_config.vim`, and then performing steps 3 & 4 from the install steps above.
 
+## Ruby focused unit test
+
+Makes it easy to run a focused set of ruby tests from within `vim`.
+
+* Run the test/spec your cursor is currently on
+* Run the context your cursor is currently in
+* Run the entire test/spec you are working in
+* Streaming output to a new buffer
+
+This plugin currently supports
+
+* `test/unit`
+* `dust`
+* `rspec`
+* `shoulda`
+
+**Customizations**:
+
+* `<Leader>ra` - run all tests in the current buffer
+* `<Leader>rc` - run all tests in the current context
+* `<Leader>rf` - run current test
+* `<Leader>rl` - re-run last test command
+
 ## "Project Drawer" aka NERDTree
 
 NERDTree is a file explorer plugin that provides "project drawer"
@@ -79,7 +102,7 @@ based on the current context.
 
 ## ctags
 
-Janus includes the TagList plugin, which binds `:Tlist` to an overview
+Includes the TagList plugin, which binds `:Tlist` to an overview
 panel that lists all ctags for easy navigation.
 
 **Customizations**: Binds `<Leader>rt` to the ctags command to
