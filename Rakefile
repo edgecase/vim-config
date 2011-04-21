@@ -4,6 +4,8 @@ require 'rake'
 desc "symlink vim files"
 task :default do
   symlink %w[ .vimrc .gvimrc .vim ]
+  # install vundle
+  system "git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git"
 end
 
 
@@ -43,7 +45,7 @@ def prompt_to_link_file(file)
   case $stdin.gets.chomp
     when 'y' then replace_file(file)
     when 'a' then replace_all(file)
-    when 'q' then exit      
+    when 'q' then exit
     else       skip_file(file)
   end
 end
@@ -65,7 +67,7 @@ def replace_all(file)
 end
 
 def skip_file(file)
-  puts " => skipping ~/#{file}" 
+  puts " => skipping ~/#{file}"
 end
 
 def skip_identical_file(file)

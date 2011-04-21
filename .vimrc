@@ -1,5 +1,6 @@
 " bring in the bundles
-call pathogen#runtime_append_all_bundles()
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
 
 runtime! common_config/*.vim
 

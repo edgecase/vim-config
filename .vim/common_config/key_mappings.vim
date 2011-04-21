@@ -11,50 +11,19 @@
 " shortcut to save all
   nmap <Leader>s :wa<cr>
 
-" shortcuts for running tests
-  nmap <Leader>ra :wa<cr> :RunAllRubyTests<cr>
-  nmap <Leader>rc :wa<cr> :RunRubyFocusedContext<cr>
-  nmap <Leader>rf :wa<cr> :RunRubyFocusedUnitTest<cr>
-  nmap <Leader>rl :wa<cr> :RunLastRubyTest<cr>
-
-" open project view
-  nmap gt :NERDTreeToggle<cr>
-  nmap g :NERDTree \| NERDTreeToggle \| NERDTreeFind<cr>
-
 " close all other windows (in the current tab)
   nmap gW :only<cr>
 
 " go to the alternate file (previous buffer) with g-enter
   nmap g 
 
-" ack for project-wide searching (TRAILING WHITESPACE IS INTENTIONAL)
-  nmap g/ :Ack! 
-  nmap g* :Ack! -w <C-R><C-W> 
-  nmap ga :AckAdd! 
-  nmap gn :cnext<cr>
-  nmap gp :cprev<cr>
-  nmap gq :ccl<cr>
-
 " shortcuts for frequenly used files
   nmap gs :e db/schema.rb<cr>
   nmap gr :e config/routes.rb<cr>
 
-" # to surround with ruby string interpolation
-  let g:surround_35 = "#{\r}"
-" - to surround with no-output erb tag
-  let g:surround_45 = "<% \r %>"
-" = to surround with output erb tag
-  let g:surround_61 = "<%= \r %>"
-
 " insert blank lines without going into insert mode
   nmap go o<esc>
   nmap gO O<esc>
-
-" Fuzzy Finder - cmd-enter to open selected file in new tab
-  let g:fuf_keyOpenTabpage = '<D-CR>'
-  nmap <Leader>t :FufCoverageFile<cr>
-  nmap <Leader>b :FufBuffer<cr>
-  nmap <Leader>f :FufRenewCache<cr>
 
 " mapping the jumping between splits. Hold control while using vim nav.
   nmap <C-J> <C-W>j
@@ -73,15 +42,6 @@
 " Yank from the cursor to the end of the line, to be consistent with C and D.
   nnoremap Y y$
 
-" rails.vim mappings
-  map <Leader>oc :Rcontroller<Space>
-  map <Leader>ov :Rview<Space>
-  map <Leader>om :Rmodel<Space>
-  map <Leader>oh :Rhelper<Space>
-  map <Leader>oj :Rjavascript<Space>
-  map <Leader>os :Rstylesheet<Space>
-  map <Leader>oi :Rintegration<Space>
-
 " select the lines which were just pasted
   nnoremap vv `[V`]
 
@@ -91,11 +51,5 @@
 " compress excess whitespace on current line
   map <Leader>e :s/\v(\S+)\s+/\1 /<cr>
 
-" shortcut to align text with Tabular
-  map <Leader>a :Tabular<space>
-
 " delete all buffers
   map <Leader>d :bufdo bd<cr>
-
-" view tree history with Gundo
-  map <Leader>h :GundoToggle<CR>
