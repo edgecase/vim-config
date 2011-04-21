@@ -34,9 +34,9 @@
     nmap g/ :Ack!
     nmap g* :Ack! -w <C-R><C-W>
     nmap ga :AckAdd!
-    nmap gn :cnext<cr>
-    nmap gp :cprev<cr>
-    nmap gq :ccl<cr>
+    nmap gn :cnext<CR>
+    nmap gp :cprev<CR>
+    nmap gq :ccl<CR>
 
 
 " Taglist-plus for navigation by tags using CTags
@@ -52,10 +52,10 @@
 " being loaded twice)
   if !exists(':RunRubyFocusedUnitTest')
     Bundle "git://github.com/drewolson/ruby_focused_unit_test_vim.git"
-      nmap <Leader>ra :wa<cr> :RunAllRubyTests<cr>
-      nmap <Leader>rc :wa<cr> :RunRubyFocusedContext<cr>
-      nmap <Leader>rf :wa<cr> :RunRubyFocusedUnitTest<cr>
-      nmap <Leader>rl :wa<cr> :RunLastRubyTest<cr>
+      nmap <Leader>ra :wa<CR> :RunAllRubyTests<CR>
+      nmap <Leader>rc :wa<CR> :RunRubyFocusedContext<CR>
+      nmap <Leader>rf :wa<CR> :RunRubyFocusedUnitTest<CR>
+      nmap <Leader>rl :wa<CR> :RunLastRubyTest<CR>
   endif
 
 " Markdown syntax highlighting
@@ -67,12 +67,17 @@
     augroup END
 
 
+" Markdown preview to quickly preview markdown files
+  Bundle "git://github.com/robgleeson/vim-markdown-preview.git"
+  map <buffer> <Leader>mp :Mm<CR>
+
+
 " NERDTree for project drawer
   Bundle "git://github.com/scrooloose/nerdtree.git"
     let NERDTreeHijackNetrw = 0
 
-    nmap gt :NERDTreeToggle<cr>
-    nmap g :NERDTree \| NERDTreeToggle \| NERDTreeFind<cr>
+    nmap gt :NERDTreeToggle<CR>
+    nmap g :NERDTree \| NERDTreeToggle \| NERDTreeFind<CR>
 
 
 " Tabular for aligning text
@@ -105,9 +110,9 @@
 
     let g:fuf_keyOpenTabpage = '<D-CR>'
 
-    nmap <Leader>t :FufCoverageFile<cr>
-    nmap <Leader>b :FufBuffer<cr>
-    nmap <Leader>f :FufRenewCache<cr>
+    nmap <Leader>t :FufCoverageFile<CR>
+    nmap <Leader>b :FufBuffer<CR>
+    nmap <Leader>f :FufRenewCache<CR>
 
 
 " ShowMarks to visually show placement of marks in files
