@@ -16,12 +16,12 @@ installations that are built with all of the `vim` features necessary to support
 
 ## Customizing
 
-Customizations can be added to .vim/custom_config/username.vim and .vim/custom_config.username.gvim,
+Customizations can be added to `.vim/custom_config/username.vim` and `.vim/custom_config.username.gvim`,
 where username == `whoami`.  When Vim starts up, it will look for customization files matching the
 name of the currently logged-in user.
 
-You can add custom plugins by registering them in this custom config file with the same Bundle "plugin-repo-url"
-syntax used in the common_config/plugin_config.vim, and then performing steps 3 & 4 from the install steps above.
+You can add custom plugins by registering them in this custom config file with the same `Bundle "plugin-repo-url"`
+syntax used in the `.vim/common_config/plugin_config.vim`, and then performing steps 3 & 4 from the install steps above.
 
 ## TODO
 
