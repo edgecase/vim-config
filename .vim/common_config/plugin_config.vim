@@ -2,7 +2,6 @@
 " install plugins.
 
 " Plugins requiring no additional configuration or keymaps
-  Bundle "git://github.com/vim-scripts/Align.git"
   Bundle "git://github.com/vim-scripts/Color-Sampler-Pack.git"
   Bundle "git://github.com/oscarh/vimerl.git"
   Bundle "git://github.com/tpope/vim-git.git"

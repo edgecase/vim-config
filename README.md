@@ -4,7 +4,7 @@ You should give it a try.
 
 ## Pre-requisites
 
-This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim` 
+This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim`
 installations that are built with all of the `vim` features necessary to support the used plugins.
 
 ## Install
@@ -66,15 +66,15 @@ Allows you to use tab-completion of words in the current buffer when searching.
 
 ## T-Comment
 
-TComment works like a toggle, i.e., it will comment out text that 
-contains uncommented lines, and it will remove comment markup for 
+TComment works like a toggle, i.e., it will comment out text that
+contains uncommented lines, and it will remove comment markup for
 already commented text (i.e. text that contains no uncommented lines).
 
-If the file-type is properly defined, TComment will figure out which 
-comment string to use. Otherwise you use |TCommentDefineType()| to 
+If the file-type is properly defined, TComment will figure out which
+comment string to use. Otherwise you use |TCommentDefineType()| to
 override the default choice.
 
-TComment can properly handle an embedded syntax, e.g., ruby/python/perl 
+TComment can properly handle an embedded syntax, e.g., ruby/python/perl
 regions in vim scripts, HTML or JavaScript in php code etc.
 
 * `gc{motion}` - Toggle comments (for small comments within one line the &filetype_inline style will be used, if defined)
@@ -85,18 +85,18 @@ regions in vim scripts, HTML or JavaScript in php code etc.
 
 ## ShowMarks
 
-ShowMarks provides a visual representation of the location marks. 
-Marks are useful for jumping back and forth between interesting points in a buffer, but can be hard to keep track of without any way to see where you have placed them.  ShowMarks hopefully makes life easier by placing a sign in the leftmost column of the buffer.  The sign indicates the label of the mark and its location. 
-It can be toggled on and off and individual marks can be hidden(effectively removing them). 
+ShowMarks provides a visual representation of the location marks.
+Marks are useful for jumping back and forth between interesting points in a buffer, but can be hard to keep track of without any way to see where you have placed them.  ShowMarks hopefully makes life easier by placing a sign in the leftmost column of the buffer.  The sign indicates the label of the mark and its location.
+It can be toggled on and off and individual marks can be hidden(effectively removing them).
 
-By default the following keymappings are defined: 
+By default the following keymappings are defined:
 
-* `<Leader>mt` - Toggles ShowMarks on and off. 
-* `<Leader>mh` - Hides an individual mark. 
-* `<Leader>ma` - Hides all marks in the current buffer. 
-* `<Leader>mm` - Places the next available mark. 
+* `<Leader>mt` - Toggles ShowMarks on and off.
+* `<Leader>mh` - Hides an individual mark.
+* `<Leader>ma` - Hides all marks in the current buffer.
+* `<Leader>mm` - Places the next available mark.
 
-ShowMarks requires that Vim is compiled with the +signs feature. 
+ShowMarks requires that Vim is compiled with the +signs feature.
 
 ## Fugitive
 
@@ -184,12 +184,48 @@ You can learn more about it with :help Ack
 
 **Customizations**: `g/` to bring up `:Ack `.
 
-## Align
+## Tabular
 
-Align lets you align statements on their equal signs, make comment
+Lets you align statements on their equal signs, make comment
 boxes, align comments, align declarations, etc.
 
-* `:5,10Align =>` to align lines 5-10 on `=>`'s
+Tabular's commands are based largely on regular expressions.  The basic
+technique used by Tabular is taking some regex to match field delimiters,
+splitting the input lines at those delimiters, trimming unnecessary spaces
+from the non-delimiter parts, padding the non-delimiter parts of the lines
+with spaces to make them the same length, and joining things back together
+again.
+
+For instance, consider starting with the following lines:
+
+`>
+    Some short phrase,some other phrase
+    A much longer phrase here,and another long phrase
+<`
+
+Let's say we want to line these lines up at the commas.  We can tell
+Tabularize to do this by passing a pattern matching , to the Tabularize
+command:
+
+`>
+  :Tabularize /,
+
+    Some short phrase         , some other phrase
+    A much longer phrase here , and another long phrase
+<`
+
+**Customizations**
+
+The following tabular patterns have been added:
+
+`symbols         / :/l0`
+`hash            /=>/`
+`chunks          / \S\+/l0`
+`assignment      / = /l0`
+`comma           /,\zs /l0`
+`colon           /:\zs /l0`
+`options_hashes  /:\w\+ =>/`
+
 
 ## indent\_object
 
@@ -200,14 +236,14 @@ normal mode, and type `v ii`. Then repeat `ii`.
 
 ## text-object-ruby-block
 
-When textobj-rubyblock is installed you will gain two new text objects, 
-which are triggered by `ar` and `ir` respectively. These follow Vim convention, 
-so that `ar` selects all of a ruby block, and `ir` selects the inner portion 
+When textobj-rubyblock is installed you will gain two new text objects,
+which are triggered by `ar` and `ir` respectively. These follow Vim convention,
+so that `ar` selects all of a ruby block, and `ir` selects the inner portion
 of a rubyblock.
 
-In ruby, a block is always closed with the end keyword. Ruby blocks may 
-be opened using one of several keywords, including module, class, def, if, 
-and do. 
+In ruby, a block is always closed with the end keyword. Ruby blocks may
+be opened using one of several keywords, including module, class, def, if,
+and do.
 
 ## surround
 
