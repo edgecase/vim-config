@@ -82,18 +82,18 @@
 " Tabular for aligning text
   Bundle "git://github.com/godlygeek/tabular.git"
     function! CustomTabularPatterns()
-      AddTabularPattern! symbols         / :/l0
-      AddTabularPattern! hash            /=>/
-      AddTabularPattern! chunks          / \S\+/l0
-      AddTabularPattern! assignment      / = /l0
-      AddTabularPattern! comma           /,\zs /l0
-      AddTabularPattern! colon           /:\zs /l0
-      AddTabularPattern! options_hashes  /:\w\+ =>/
+      if exists('g:tabular_loaded')
+        AddTabularPattern! symbols         / :/l0
+        AddTabularPattern! hash            /=>/
+        AddTabularPattern! chunks          / \S\+/l0
+        AddTabularPattern! assignment      / = /l0
+        AddTabularPattern! comma           /,\zs /l0
+        AddTabularPattern! colon           /:\zs /l0
+        AddTabularPattern! options_hashes  /:\w\+ =>/
+      endif
     endfunction
 
-    if exists('g:loaded_tabular')
-      autocmd VimEnter * call CustomTabularPatterns()
-    endif
+    autocmd VimEnter * call CustomTabularPatterns()
 
     " shortcut to align text with Tabular
     map <Leader>a :Tabular<space>
