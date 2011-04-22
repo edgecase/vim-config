@@ -32,7 +32,6 @@
 
 " highlight the search matches
   set hlsearch
-  B
 
 " searching is case insensitive when all lowercase
   set ignorecase smartcase
