@@ -22,7 +22,6 @@
   Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
   Bundle "git://github.com/kana/vim-textobj-user.git"
   Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
-  Bundle "git://github.com/vim-scripts/SearchComplete.git"
   Bundle "git://github.com/tpope/vim-repeat.git"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
   Bundle "git://github.com/wgibbs/vim-irblack.git"
@@ -56,6 +55,7 @@
       nmap <Leader>rf :wa<CR> :RunRubyFocusedUnitTest<CR>
       nmap <Leader>rl :wa<CR> :RunLastRubyTest<CR>
   endif
+
 
 " Markdown syntax highlighting
   Bundle "git://github.com/tpope/vim-markdown.git"

@@ -60,10 +60,6 @@ Awesome visual representation of `vim` undo tree.
 
 * `<Leader>h` - Toggle gundo
 
-## Search Complete
-
-Allows you to use tab-completion of words in the current buffer when searching.
-
 ## T-Comment
 
 TComment works like a toggle, i.e., it will comment out text that
