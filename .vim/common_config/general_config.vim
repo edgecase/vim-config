@@ -30,6 +30,10 @@
 " show the first match as search strings are typed
   set incsearch
 
+" highlight the search matches
+  set hlsearch
+  B
+
 " searching is case insensitive when all lowercase
   set ignorecase smartcase
  
@@ -99,3 +103,5 @@
 " remember last position in file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
+" Thorfile, Rakefile, Vagrantfile, and Gemfile are Ruby
+  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
