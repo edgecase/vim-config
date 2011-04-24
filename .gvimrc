@@ -10,6 +10,7 @@
 
 " go full screen like you mean it
   set fuoptions=maxvert,maxhorz
+  au GUIEnter * set fullscreen
 
 " use a big, pretty font
   set guifont=Monaco:h21
