@@ -126,7 +126,7 @@
 
 " ZoomWin to fullscreen a particular buffer without losing others
   Bundle "git://github.com/vim-scripts/ZoomWin.git"
-    map <Leader><Leader> :ZoomWin<CR>
+    map <Leader>z :ZoomWin<CR>
 
 
 " Unimpaired for keymaps for quicky manipulating lines and files
