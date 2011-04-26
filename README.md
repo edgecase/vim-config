@@ -16,12 +16,15 @@ installations that are built with all of the `vim` features necessary to support
 
 ## Customizing
 
-Customizations can be added to `.vim/custom_config/username.vim` and `.vim/custom_config.username.gvim`,
-where username == `whoami`.  When Vim starts up, it will look for customization files matching the
-name of the currently logged-in user.
+Customizations can be added to the folder `.vim/custom_config/`.
 
-You can add custom plugins by registering them in this custom config file with the same `Bundle "plugin-repo-url"`
+* Any files with a `.vim` extension in that folder will be loaded when running all versions of `vim`.
+* Any files with a `.gvim` extension in that folder will be loaded when running a graphical version of `vim`.
+
+You can add custom plugins by registering them in a `.vim` file in the custom_config folder with the same `Bundle "plugin-repo-url"`
 syntax used in the `.vim/common_config/plugin_config.vim`, and then performing steps 3 & 4 from the install steps above.
+
+Common practice is to symlink a folder containing your custom configuration files as the `.vim/custom_config` folder.
 
 ## Basic key mappings
 

@@ -23,4 +23,4 @@
   colors twilight2
 
 " attempt to load a custom config for the currently logged in user
-runtime! custom_config/`whoami`.gvim
+runtime! custom_config/*.gvim
