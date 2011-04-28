@@ -27,11 +27,11 @@
   Bundle "git://github.com/wgibbs/vim-irblack.git"
 
 
-" ACK (TRAILING WHITESPACE IS INTENTIONAL)
+" ACK
   Bundle "git://github.com/mileszs/ack.vim.git"
-    nmap g/ :Ack!
-    nmap g* :Ack! -w <C-R><C-W>
-    nmap ga :AckAdd!
+    nmap g/ :Ack!<space>
+    nmap g* :Ack! -w <C-R><C-W><space>
+    nmap ga :AckAdd!<space>
     nmap gn :cnext<CR>
     nmap gp :cprev<CR>
     nmap gq :ccl<CR>
