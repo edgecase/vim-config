@@ -35,6 +35,7 @@
     nmap gn :cnext<CR>
     nmap gp :cprev<CR>
     nmap gq :ccl<CR>
+    nmap gl :cwindow<CR>
 
 
 " Taglist-plus for navigation by tags using CTags
