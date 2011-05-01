@@ -61,11 +61,11 @@
   nnoremap <tab> %
   vnoremap <tab> %
 
-" change buffer size with +/-
-  if bufwinnr(1)
-    map + <C-W>+
-    map - <C-W>-
-  endif
+" buffer resizing mappings (shift + arrow key)
+  nnoremap <S-Up> <c-w>+
+  nnoremap <S-Down> <c-w>-
+  nnoremap <S-Left> <c-w><
+  nnoremap <S-Right> <c-w>>
 
 " reindent the entire file
   map <Leader>I gg=G``<cr>
