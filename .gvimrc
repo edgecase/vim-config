@@ -13,7 +13,7 @@
   au GUIEnter * set fullscreen
 
 " use a big, pretty font
-  set guifont=Monaco:h21
+  set guifont=Monaco:h15
 
 " initial window size
   set lines=45 columns=120
@@ -22,5 +22,4 @@
   set background=dark
   colors twilight2
 
-" attempt to load a custom config for the currently logged in user
 runtime! custom_config/*.gvim
