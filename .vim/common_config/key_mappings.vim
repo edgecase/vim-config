@@ -9,7 +9,7 @@
   nmap <Leader>W :set nowrap<cr>
 
 " shortcut to save all
-  nmap <Leader>s :wa<cr>
+  nmap <Leader>ss :wa<cr>
 
 " close all other windows (in the current tab)
   nmap gW :only<cr>
