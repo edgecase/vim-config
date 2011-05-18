@@ -26,9 +26,56 @@ syntax used in the `.vim/common_config/plugin_config.vim`, and then performing s
 
 Common practice is to symlink a folder containing your custom configuration files as the `.vim/custom_config` folder.
 
-## Basic key mappings
+## Key mappings (remember case matters!)
 
-TODO: forthcoming...
+* `CMD + i` - exit out of insert mode
+* `U` - redo
+* `<leader>w` - turn on line wrapping
+* `<leader>W` - turn off line wrapping
+* `<leader>ss` - save all buffers
+* `Y` - copy (yank) from the cursor to the end of the line
+* `vv` - select the lines which were just pasted
+* `<leader><spacebar>` - clear search highlighting
+* `ctrl + p` - insert path of currently active buffer into command
+
+#### Whitespace key mappings
+
+* `go` - insert blank line below current without entering insert mode
+* `gO` - insert blank line above current without entering insert mode
+* `<leader>I` - reindent the entire file
+* `<leader>c` - cleanup trailing whitespace in current buffer
+* `<leader>e` - compress excess whitespace on current line
+
+#### Buffers & Navigation key mappings
+
+* `gW` - close all buffers other than the active one (within current tab)
+* `g<Enter>` - go back to the previously active buffer
+* `<leader>d` - delete all buffers
+* `<tab>` - match bracket pairs in normal and visual mode
+
+* `ctrl + w + j` - move one buffer down
+* `ctrl + w + k` - move one buffer up
+* `ctrl + w + h` - move one buffer left
+* `ctrl + w + l` - move one buffer right
+
+* `shift + up-arrow` - make horizontal split larger
+* `shift + down-arrow` - make horizontal split smaller
+* `shift + left-arrow` - make vertical split smaller
+* `shift + right-arrow` - make vertical split larger
+
+#### Ruby key mappings
+
+* `ctrl + l` - insert a `=>` surrounded by spaces
+
+#### Rails key mappings
+
+* `gs` - jump to schema file
+* `gr` - jump to routes file
+
+#### Macros (from within insert mode type abbreviation followed by punctuation or space)
+
+* `Lidsa` - insert some lorem ipsum text
+* `rdebug` - insert ruby specfic debugger statement
 
 ## FuzzyFinder
 
@@ -36,8 +83,8 @@ Provides convenient ways to quickly reach the
 buffer/file/command/bookmark/tag you want. FuzzyFinder searches with the
 fuzzy/partial pattern to which it converted an entered pattern.
 
-* `<Leader>t` - fuzzy find files
-* `<Leader>b` - fuzzy find open buffers
+* `<leader>t` - fuzzy find files
+* `<leader>b` - fuzzy find open buffers
 
 ## Unimpaired
 
@@ -61,7 +108,7 @@ Awesome visual representation of `vim` undo tree.
 
 **Customizations**
 
-* `<Leader>h` - Toggle gundo
+* `<leader>h` - Toggle gundo
 
 ## T-Comment
 
@@ -90,10 +137,10 @@ It can be toggled on and off and individual marks can be hidden(effectively remo
 
 By default the following keymappings are defined:
 
-* `<Leader>mt` - Toggles ShowMarks on and off.
-* `<Leader>mh` - Hides an individual mark.
-* `<Leader>ma` - Hides all marks in the current buffer.
-* `<Leader>mm` - Places the next available mark.
+* `<leader>mt` - Toggles ShowMarks on and off.
+* `<leader>mh` - Hides an individual mark.
+* `<leader>ma` - Hides all marks in the current buffer.
+* `<leader>mm` - Places the next available mark.
 
 ShowMarks requires that Vim is compiled with the +signs feature.
 
@@ -162,10 +209,10 @@ This plugin currently supports
 
 **Customizations**:
 
-* `<Leader>ra` - run all tests in the current buffer
-* `<Leader>rc` - run all tests in the current context
-* `<Leader>rf` - run current test
-* `<Leader>rl` - re-run last test command
+* `<leader>ra` - run all tests in the current buffer
+* `<leader>rc` - run all tests in the current context
+* `<leader>rf` - run current test
+* `<leader>rl` - re-run last test command
 
 ## "Project Drawer" aka NERDTree
 
@@ -174,7 +221,7 @@ functionality to your vim projects.  You can learn more about it with
 `:help NERDTree`.
 
 **Customizations**:
-Use `<Leader>t` to toggle NERDTree
+Use `<leader>t` to toggle NERDTree
 
 ## Ack.vim
 
@@ -262,8 +309,8 @@ based on the current context.
 Includes the TagList plugin, which binds `:Tlist` to an overview
 panel that lists all ctags for easy navigation.
 
-**Customizations**: Binds `<Leader>rt` to the ctags command to
-update tags. Bind `<Leader>.` to toggle the taglist window
+**Customizations**: Binds `<leader>rt` to the ctags command to
+update tags. Bind `<leader>.` to toggle the taglist window
 
 **Note**: For full language support, run `brew install ctags` to install
 exuberant-ctags.
@@ -292,14 +339,14 @@ Try `:Gist`, `:Gist -p` and visual blocks.
 When working with split windows, ZoomWin lets you zoom into a window and
 out again using `Ctrl-W o`
 
-**Customizations**: Binds `<Leader>z` to `:ZoomWin`
+**Customizations**: Binds `<leader>z` to `:ZoomWin`
 
 ## Markdown Preview
 
 Markdown preview takes the current buffer, converts the Markdown to
 HTML, and opens it in your default browser.
 
-**Customizations**: Binds `<Leader>mp` to this plugin.
+**Customizations**: Binds `<leader>mp` to this plugin.
 
 ## Additional Syntaxes / Language Support
 
