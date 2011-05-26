@@ -39,13 +39,11 @@
     nmap gl :cwindow<CR>
 
 
-" Taglist-plus for navigation by tags using CTags
-  Bundle "git://github.com/int3/vim-taglist-plus.git"
-    let Tlist_WinWidth='auto'
-
+" Tagbar for navigation by tags using CTags
+  Bundle "git://github.com/majutsushi/tagbar.git"
+    let g:tagbar_autofocus = 1
     map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-    map <C-\> :tnext<CR>
-    map <Leader>. :TlistToggle<CR>
+    map <Leader>. :TagbarToggle<CR>
 
 
 " Ruby focused unit test (wrapped in an if-loaded because it doesn't like
@@ -114,7 +112,7 @@
     nmap <Leader>t :FufCoverageFile<CR>
     nmap <Leader>b :FufBuffer<CR>
     nmap <Leader>f :FufRenewCache<CR>
-
+    noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
 
 " ShowMarks to visually show placement of marks in files
   Bundle "git://github.com/garbas/vim-showmarks.git"

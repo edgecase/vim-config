@@ -85,6 +85,9 @@ fuzzy/partial pattern to which it converted an entered pattern.
 
 * `<leader>t` - fuzzy find files
 * `<leader>b` - fuzzy find open buffers
+* `ctrl + j` - open selected item in window in horizontal split
+* `ctrl + k` - open selected item in vertical split
+* `ctrl + ]` - use fuzzy finder to navigate via tags instead of built-in tag navigation
 
 ## Unimpaired
 
@@ -304,16 +307,22 @@ There's a lot more; check it out at `:help surround`
 In insert mode, start typing something and hit `<TAB>` to tab-complete
 based on the current context.
 
-## ctags
+## Tagbar
 
-Includes the TagList plugin, which binds `:Tlist` to an overview
-panel that lists all ctags for easy navigation.
+Plugin for browsing the tags of source code files. It provides a
+sidebar that displays the ctags-generated tags of the current file, ordered by
+their scope. This means that for example methods in C++ are displayed under
+the class they are defined in.
 
 **Customizations**: Binds `<leader>rt` to the ctags command to
 update tags. Bind `<leader>.` to toggle the taglist window
 
 **Note**: For full language support, run `brew install ctags` to install
-exuberant-ctags.
+exuberant-ctags. Also if using OSX you may need to rename the system installed
+ctags version so that vim correctly finds the exuberant ctags version instead,
+`sudo mv /usr/bin/ctags /usr/bin/ctags_orig`. In addition, TagBar supports
+doctorjs/jsctags if installed for awesome tag support for javascript.
+
 
 **Tip**: Check out `:help ctags` for information about VIM's built-in
 ctag support. Tag navigation creates a stack which can traversed via
