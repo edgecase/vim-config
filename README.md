@@ -224,7 +224,7 @@ functionality to your vim projects.  You can learn more about it with
 `:help NERDTree`.
 
 **Customizations**:
-Use `<leader>t` to toggle NERDTree
+Use `gt` to toggle NERDTree
 
 ## Ack.vim
 
