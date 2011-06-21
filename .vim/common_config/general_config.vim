@@ -42,9 +42,6 @@
 " set temporary directory (don't litter local dir with swp/tmp files)
   set directory=/tmp/
 
-" set directory to store tag files
-  set tags =~/.tags
-
 " pick up external file modifications
   set autoread
 
