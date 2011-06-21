@@ -85,9 +85,9 @@ fuzzy/partial pattern to which it converted an entered pattern.
 
 * `<leader>t` - fuzzy find files
 * `<leader>b` - fuzzy find open buffers
+* `<leader>T` - use fuzzy finder to navigate via tags instead of built-in tag navigation
 * `ctrl + j` - open selected item in window in horizontal split
 * `ctrl + k` - open selected item in vertical split
-* `ctrl + ]` - use fuzzy finder to navigate via tags instead of built-in tag navigation
 
 ## Unimpaired
 

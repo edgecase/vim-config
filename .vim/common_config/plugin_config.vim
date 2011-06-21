@@ -116,7 +116,7 @@
     nmap <Leader>t :FufCoverageFile<CR>
     nmap <Leader>b :FufBuffer<CR>
     nmap <Leader>f :FufRenewCache<CR>
-    noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
+    nmap <Leader>T :FufTagWithCursorWord!<CR>
 
 " ShowMarks to visually show placement of marks in files
   Bundle "git://github.com/garbas/vim-showmarks.git"
