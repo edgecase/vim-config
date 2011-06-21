@@ -71,7 +71,7 @@
 
 
 " Markdown preview to quickly preview markdown files
-  Bundle "git://github.com/robgleeson/vim-markdown-preview.git"
+  Bundle "git://github.com/maba/vim-markdown-preview.git"
   map <buffer> <Leader>mp :Mm<CR>
 
 
