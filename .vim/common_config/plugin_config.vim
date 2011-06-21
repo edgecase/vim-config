@@ -6,7 +6,6 @@
   Bundle "git://github.com/oscarh/vimerl.git"
   Bundle "git://github.com/tpope/vim-git.git"
   Bundle "git://github.com/harleypig/vcscommand.vim.git"
-  Bundle "git://github.com/kchmck/vim-coffee-script.git"
   Bundle "git://github.com/altercation/vim-colors-solarized.git"
   Bundle "git://github.com/tpope/vim-cucumber.git"
   Bundle "git://github.com/tpope/vim-endwise.git"
@@ -26,6 +25,11 @@
   Bundle "git://github.com/tpope/vim-repeat.git"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
   Bundle "git://github.com/wgibbs/vim-irblack.git"
+
+
+" Coffee script
+  Bundle "git://github.com/kchmck/vim-coffee-script.git"
+    au BufNewFile,BufRead *.coffee set filetype=coffee
 
 
 " ACK
