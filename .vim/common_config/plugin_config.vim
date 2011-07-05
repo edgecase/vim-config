@@ -109,7 +109,7 @@
     let g:fuf_coveragefile_exclude = '\v\~$|' .
     \                                '\.(o|exe|dll|bak|swp|log|sqlite3|png|gif|jpg)$|' .
     \                                '(^|[/\\])\.(hg|git|bzr|bundle)($|[/\\])|' .
-    \                                '(^|[/\\])(log|tmp|vendor|system|doc|coverage|build)($|[/\\])'
+    \                                '(^|[/\\])(log|tmp|vendor|system|doc|coverage|build|generated)($|[/\\])'
 
     let g:fuf_keyOpenTabpage = '<D-CR>'
 
