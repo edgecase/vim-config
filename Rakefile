@@ -5,7 +5,7 @@ desc "symlink vim files"
 task :default do
   symlink %w[ .vimrc .gvimrc .vim ]
   # install vundle
-  system "git clone git://github.com/gmarik/vundle.git ~/.vim/vundle.git"
+  system "git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git"
 end
 
 
