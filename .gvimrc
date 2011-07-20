@@ -9,11 +9,11 @@
   set guioptions-=L
 
 " go full screen like you mean it
-  set fuoptions=maxvert,maxhorz
-  au GUIEnter * set fullscreen
+  " set fuoptions=maxvert,maxhorz
+  " au GUIEnter * set fullscreen
 
 " use a big, pretty font
-  set guifont=Monaco:h15
+  " set guifont=Monaco:h15
 
 " initial window size
   set lines=45 columns=120
