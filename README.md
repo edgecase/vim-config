@@ -44,7 +44,7 @@ Common practice is to symlink a folder containing your custom configuration file
 * `gO` - insert blank line above current without entering insert mode
 * `<leader>I` - reindent the entire file
 * `<leader>c` - cleanup trailing whitespace in current buffer
-* `<leader>e` - compress excess whitespace on current line
+* `<leader>e` - compress excess whitespace on current line (cleans tabularize spacing)
 
 #### Buffers & Navigation key mappings
 
