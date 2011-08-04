@@ -29,7 +29,6 @@ Common practice is to symlink a folder containing your custom configuration file
 ## Key mappings (remember case matters!)
 
 * `CMD + i` - exit out of insert mode
-* `U` - redo
 * `<leader>w` - turn on line wrapping
 * `<leader>W` - turn off line wrapping
 * `<leader>ss` - save all buffers
