@@ -118,15 +118,6 @@
     nmap <Leader>f :FufRenewCache<CR>
     nmap <Leader>T :FufTagWithCursorWord!<CR>
 
-" ShowMarks to visually show placement of marks in files
-  Bundle "git://github.com/garbas/vim-showmarks.git"
-    let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-    highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
-    highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
-    highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
-    highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
-
 
 " ZoomWin to fullscreen a particular buffer without losing others
   Bundle "git://github.com/vim-scripts/ZoomWin.git"
