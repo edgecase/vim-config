@@ -131,21 +131,6 @@ regions in vim scripts, HTML or JavaScript in php code etc.
 * `gCc`        - Comment the current line
 
 
-## ShowMarks
-
-ShowMarks provides a visual representation of the location marks.
-Marks are useful for jumping back and forth between interesting points in a buffer, but can be hard to keep track of without any way to see where you have placed them.  ShowMarks hopefully makes life easier by placing a sign in the leftmost column of the buffer.  The sign indicates the label of the mark and its location.
-It can be toggled on and off and individual marks can be hidden(effectively removing them).
-
-By default the following keymappings are defined:
-
-* `<leader>mt` - Toggles ShowMarks on and off.
-* `<leader>mh` - Hides an individual mark.
-* `<leader>ma` - Hides all marks in the current buffer.
-* `<leader>mm` - Places the next available mark.
-
-ShowMarks requires that Vim is compiled with the +signs feature.
-
 ## Fugitive
 
 I'm not going to lie to you; fugitive.vim may very well be the best
