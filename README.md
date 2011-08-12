@@ -345,14 +345,12 @@ HTML, and opens it in your default browser.
 
 **Customizations**: Binds `<leader>mp` to this plugin.
 
-## OpenHtml
+## Other goodies
 
-OpenHtml is a custom function to convert the current file (or range)
-into styled HTML and open in your default browser. This makes it easy
-to copy the result (as RTF) from the browser into anther document or
-presentation.
-
-Just run :OpenHtml, then highlight and copy the text from your browser.
+* `:OpenHtml` - view the current file (or selected lines) in a browser
+  (for copying & pasting with syntax highlighting)
+* `:Tidy` - tidy an HTML/XML file inline
+* `:AlignColons` - align all colon-separated content (CSS rules) in a file
 
 ## Additional Syntaxes / Language Support
 
