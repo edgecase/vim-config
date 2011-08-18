@@ -88,7 +88,7 @@
     function! CustomTabularPatterns()
       if exists('g:tabular_loaded')
         AddTabularPattern! symbols         / :/l0
-        AddTabularPattern! hash            /=>/
+        AddTabularPattern! hash            /^[^>]*\zs=>/
         AddTabularPattern! chunks          / \S\+/l0
         AddTabularPattern! assignment      / = /l0
         AddTabularPattern! comma           /,\zs /l0
