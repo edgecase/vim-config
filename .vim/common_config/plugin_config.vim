@@ -64,9 +64,9 @@
 " Markdown syntax highlighting
   Bundle "git://github.com/tpope/vim-markdown.git"
     augroup mkd
-      autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
-      autocmd BufRead *.md  set ai formatoptions=tcroqn2 comments=n:>
-      autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:>
+      autocmd BufRead *.mkd      set ai formatoptions=tcroqn2 comments=n:> ft=markdown
+      autocmd BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> ft=markdown
+      autocmd BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> ft=markdown
     augroup END
 
 
