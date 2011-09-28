@@ -35,7 +35,7 @@ Common practice is to symlink a folder containing your custom configuration file
 * `Y` - copy (yank) from the cursor to the end of the line
 * `vv` - select the lines which were just pasted
 * `<leader><spacebar>` - clear search highlighting
-* `ctrl + p` - insert path of currently active buffer into command
+* `<C-p>` - insert path of currently active buffer into command
 
 #### Whitespace key mappings
 
@@ -52,10 +52,10 @@ Common practice is to symlink a folder containing your custom configuration file
 * `<leader>d` - delete all buffers
 * `<tab>` - match bracket pairs in normal and visual mode
 
-* `ctrl + w + j` - move one buffer down
-* `ctrl + w + k` - move one buffer up
-* `ctrl + w + h` - move one buffer left
-* `ctrl + w + l` - move one buffer right
+* `<C-w-j>` - move one buffer down
+* `<C-w-k>` - move one buffer up
+* `<C-w-h>` - move one buffer left
+* `<C-w-l>` - move one buffer right
 
 * `shift + up-arrow` - make horizontal split larger
 * `shift + down-arrow` - make horizontal split smaller
@@ -64,7 +64,7 @@ Common practice is to symlink a folder containing your custom configuration file
 
 #### Ruby key mappings
 
-* `ctrl + l` - insert a `=>` surrounded by spaces
+* `<C-l>` - insert a `=>` surrounded by spaces
 
 #### Rails key mappings
 
@@ -85,8 +85,8 @@ fuzzy/partial pattern to which it converted an entered pattern.
 * `<leader>t` - fuzzy find files
 * `<leader>b` - fuzzy find open buffers
 * `<leader>T` - use fuzzy finder to navigate via tags instead of built-in tag navigation
-* `ctrl + j` - open selected item in window in horizontal split
-* `ctrl + k` - open selected item in vertical split
+* `<C-j>` - open selected item in window in horizontal split
+* `<C-k>` - open selected item in vertical split
 
 ## Unimpaired
 
@@ -314,7 +314,7 @@ doctorjs/jsctags if installed for awesome tag support for javascript.
 
 **Tip**: Check out `:help ctags` for information about VIM's built-in
 ctag support. Tag navigation creates a stack which can traversed via
-`Ctrl-]` (to find the source of a token) and `Ctrl-T` (to jump back up
+`<C-]>` (to find the source of a token) and `<C-T>` (to jump back up
 one level).
 
 ## Matchit / ruby-matchit
@@ -334,7 +334,7 @@ Try `:Gist`, `:Gist -p` and visual blocks.
 ## ZoomWin
 
 When working with split windows, ZoomWin lets you zoom into a window and
-out again using `Ctrl-W o`
+out again using `<C-W> o`
 
 **Customizations**: Binds `<leader>z` to `:ZoomWin`
 
