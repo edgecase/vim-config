@@ -4,8 +4,7 @@ require 'rake'
 desc "symlink vim files"
 task :default do
   symlinkage %w[ .vimrc .gvimrc .vim ]
-  # install vundle
-  system "git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git"
+  git_clone  'http://github.com/gmarik/vundle.git'
 end
 
 def symlinkage(files)
@@ -19,6 +18,12 @@ def symlinkage(files)
   end
 end
 
+def git_clone(repo)
+  puts " => git cloning #{repo}"
+  path = File.join(ENV['HOME'], '.vim', 'vundle.git')
+  remove_file(path) if file_exists?(path)
+  sh "git clone #{repo} #{esc(path)}"
+end
 
 # FILE CHECKS
 def file_exists?(file)
@@ -60,6 +65,11 @@ def replace_file(file)
   link_file(file)
 end
 
+def remove_file(file)
+  puts " => removing #{file}"
+  path = File.join(ENV['HOME'], file)
+  sh "rm -rf #{esc(path)}"
+end
 def replace_all(file)
   @replace_all = true
   replace_file(file)
