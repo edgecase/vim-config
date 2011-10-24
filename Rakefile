@@ -1,75 +1,78 @@
-require 'rubygems'
 require 'rake'
+require './lib/installer'
+require './lib/translation'
 
-desc "symlink vim files"
+MAC_FILES =
+  { '.vimrc'           => '~/.vimrc',
+    '.gvimrc'          => '~/.gvimrc',
+    '.vim'             => '~/.vim' }
+
+WINDOW_FILES =
+  { '.vimrc'           => '~/_vimrc',
+    '.gvimrc'          => '~/_gvimrc',
+    '.vim'             => '~/vimfiles',
+    'windows/ack.bat'  => 'c:\RailsInstaller\Git\cmd\ack.bat',
+    'windows/ack.pl'   => 'c:\RailsInstaller\Git\cmd\ack.pl',
+    'windows/curl.cmd' => 'c:\RailsInstaller\Git\cmd\curl.cmd' }
+
+desc "Install vim configuration and plugin files"
 task :default do
-  symlinkage %w[ .vimrc .gvimrc .vim ]
-  # install vundle
-  system "git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git"
-end
-
-
-def symlinkage(files)
-  files.each do |file|
+  installer = Installer.new(platform_files)
+  installer.files.each do |f|
     case
-      when file_identical?(file) then skip_identical_file(file)
-      when replace_all_files?    then link_file(file)
-      when file_missing?(file)   then link_file(file)
-      else                            prompt_to_link_file(file)
+      when f.identical?    then skip_file(f)
+      when replace_all?    then auto_link_files(f)
+      when f.safe_to_link? then auto_link_files(f)
+      else                      prompt_to_link_files(f)
     end
   end
+  Rake::Task['vundle'].execute
 end
 
-
-# FILE CHECKS
-def file_exists?(file)
-  File.exists?("#{ENV['HOME']}/#{file}")
+desc "Install vundle for vim plugins"
+task :vundle do
+  target = "#{platform_files['.vim']}/vundle.git"
+  Installer.git_clone('http://github.com/gmarik/vundle.git', target)
+  puts "\nIf this is a new installation, open vim and type ':BundleInstall' to install necessary plugins."
 end
 
-def file_missing?(file)
-  !file_exists?(file)
+def platform_files
+  Installer.windows? ? WINDOW_FILES : MAC_FILES
 end
 
-def file_identical?(file)
-  File.identical? file, File.join(ENV['HOME'], "#{file}")
-end
-
-def replace_all_files?
-  @replace_all == true
-end
-
-
-# FILE ACTIONS
-def prompt_to_link_file(file)
-  print "overwrite? ~/#{file} [ynaq]  "
+def prompt_to_link_files(file)
+  print "overwrite? #{file.target} [ynaq]  "
   case $stdin.gets.chomp
-    when 'y' then replace_file(file)
+    when 'y' then replace(file)
     when 'a' then replace_all(file)
     when 'q' then exit
-    else       skip_file(file)
+    else          skip_file(file)
   end
 end
 
-def link_file(file)
-  puts " => symlinking #{file}"
-  directory = File.dirname(__FILE__)
-  sh("ln -s #{File.join(directory, file)} #{ENV['HOME']}/#{file}")
+def link_files(file)
+  puts " => symlinking #{file.source} to #{file.target}"
+  file.link
 end
 
-def replace_file(file)
-  sh "rm -rf #{ENV['HOME']}/#{file}"
-  link_file(file)
+def replace(file)
+  puts " => replacing #{file.source} with #{file.target}"
+  file.force_link
 end
 
 def replace_all(file)
   @replace_all = true
-  replace_file(file)
+  replace(file)
+end
+
+def replace_all?
+  @replace_all == true
 end
 
 def skip_file(file)
-  puts " => skipping ~/#{file}"
+  puts " => skipping #{file.target}"
 end
 
-def skip_identical_file(file)
-  puts " => skipping identical ~/#{file}"
+def auto_link_files(file)
+  file.safe_to_link? ? link_files(file) : replace(file)
 end

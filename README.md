@@ -4,15 +4,26 @@ You should give it a try.
 
 ## Pre-requisites
 
-This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim`
-installations that are built with all of the `vim` features necessary to support the used plugins.
+This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim` installations that are built with all of the `vim` features necessary to support the used plugins.
+
+## Attention Windows Users!
+
+If you are installing this config on Microsoft Windows, you must download and install the latest [RailsInstaller](http://www.railsinstaller.org/) package.  Go ahead and do it now.  I'll wait.
+
+Install the latest version of [Vim](http://www.vim.org/download.php#pc) and install with default options + checking the "Create .bat files for command line use".
+
+The Windows version of the Vim configuration uses rake (for installation) git (for Vim plugin installations), and requires several other packages to emulate Ack (for file searching) and Curl (for gists) under Windows.  RailsInstaller is a single package that installs everything we will need to get things working.
 
 ## Install
 
+Windows users: be sure to use **RailsInstaller** > **Command Prompt with Ruby and Rails** instead of the normal command prompt.
+
 1. `git clone git://github.com/edgecase/vim-config.git`
-2. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
-3. `vim`
-4. `:BundleInstall` (This will clone and install all of the plugins from github.)
+2. `cd vim-config`
+3. (beta!) Get the windows branch: `git checkout windows`
+4. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
+5. `vim` (or in Windows, `gvim`)
+6. `:BundleInstall` (This will clone and install all of the plugins from github.)
 
 ## Customizing
 
@@ -380,4 +391,5 @@ popular color themes](http://www.vi-improved.org/color_sampler_pack/):
 * xoria256
 
 Use `:color vibrantink` to switch to a color scheme.
+
 
