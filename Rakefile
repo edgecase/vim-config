@@ -22,7 +22,7 @@ end
 
 # FILE CHECKS
 def file_exists?(file)
-  File.exists?("#{ENV['HOME']}/#{file}")
+  File.exists?("'#{ENV['HOME']}'/'#{file}'")
 end
 
 def file_missing?(file)
@@ -52,7 +52,7 @@ end
 def link_file(file)
   puts " => symlinking #{file}"
   directory = File.dirname(__FILE__)
-  sh("ln -s #{File.join(directory, file)} #{ENV['HOME']}/#{file}")
+  sh("ln -s '#{File.join(directory, file)}' '#{ENV['HOME']}/#{file}'")
 end
 
 def replace_file(file)
