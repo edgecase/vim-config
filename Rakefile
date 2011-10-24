@@ -1,11 +1,12 @@
 require 'rubygems'
 require 'rake'
 
-desc "symlink vim files"
 task :default do
   symlinkage %w[ .vimrc .gvimrc .vim ]
   git_clone  'http://github.com/gmarik/vundle.git'
 end
+
+
 
 def symlinkage(files)
   files.each do |file|
@@ -25,9 +26,11 @@ def git_clone(repo)
   sh "git clone #{repo} #{esc(path)}"
 end
 
+
 # FILE CHECKS
 def file_exists?(file)
-  File.exists?("'#{ENV['HOME']}'/'#{file}'")
+  path = File.join(ENV['HOME'], file)
+  File.exists?(path)
 end
 
 def file_missing?(file)
@@ -35,7 +38,8 @@ def file_missing?(file)
 end
 
 def file_identical?(file)
-  File.identical? file, File.join(ENV['HOME'], "#{file}")
+  path = File.join(ENV['HOME'], file)
+  File.identical?(file, path)
 end
 
 def replace_all_files?
@@ -56,12 +60,16 @@ end
 
 def link_file(file)
   puts " => symlinking #{file}"
-  directory = File.dirname(__FILE__)
-  sh("ln -s '#{File.join(directory, file)}' '#{ENV['HOME']}/#{file}'")
+  directory   = File.dirname(__FILE__)
+  source      = File.join(directory, file)
+  destination = File.join(ENV['HOME'], file)
+  sh("ln -s #{esc(source)} #{esc(destination)}")
 end
 
 def replace_file(file)
-  sh "rm -rf #{ENV['HOME']}/#{file}"
+  puts " => replacing #{file}"
+  path = File.join(ENV['HOME'], file)
+  sh "rm -rf #{esc(path)}"
   link_file(file)
 end
 
@@ -70,6 +78,7 @@ def remove_file(file)
   path = File.join(ENV['HOME'], file)
   sh "rm -rf #{esc(path)}"
 end
+
 def replace_all(file)
   @replace_all = true
   replace_file(file)
@@ -81,4 +90,9 @@ end
 
 def skip_identical_file(file)
   puts " => skipping identical ~/#{file}"
+end
+
+# handle file names in windows
+def esc(str)
+  "\"#{str}\""
 end
