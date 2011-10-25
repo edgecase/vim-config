@@ -8,8 +8,8 @@ end
 
 def symlinkage(files)
   files.each do |file|
+    validate_source_file(file)
     case
-      validate_source_file(file)
       when file_identical?(file) then skip_identical_file(file)
       when replace_all_files?    then link_file(file)
       when file_missing?(file)   then link_file(file)
