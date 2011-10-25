@@ -19,7 +19,6 @@ def symlinkage(files)
 end
 
 def git_clone(repo)
-  require 'pry';binding.pry
   puts " => git cloning #{repo}"
   path = File.join(ENV['HOME'], '.vim', 'vundle.git')
   remove_file(path) if file_exists?(path)
