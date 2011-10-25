@@ -19,10 +19,9 @@ def symlinkage(files)
 end
 
 def git_clone(repo)
-  puts " => git cloning #{repo}"
-  path = File.join(ENV['HOME'], '.vim', 'vundle.git')
+  path = File.join('.vim', 'vundle.git')
   remove_file(path) if file_exists?(path)
-  sh "git clone #{repo} #{esc(path)}"
+  clone_repo(repo, path)
 end
 
 
@@ -93,6 +92,10 @@ end
 
 def skip_identical_file(file)
   puts " => skipping identical ~/#{file}"
+def clone_repo(repo, target)
+  puts " => git cloning #{repo}"
+  path = File.join(ENV['HOME'], target)
+  sh "git clone #{repo} #{esc(path)}"
 end
 
 # handle file names in windows
