@@ -51,7 +51,7 @@ end
 
 # FILE ACTIONS
 def prompt_to_link_file(file)
-  print "overwrite? ~/#{file} [ynaq]  "
+  print "overwrite? #{ENV['HOME']}/#{file} [ynaq]  "
   case $stdin.gets.chomp
     when 'y' then replace_file(file)
     when 'a' then replace_all(file)
@@ -87,11 +87,13 @@ def replace_all(file)
 end
 
 def skip_file(file)
-  puts " => skipping ~/#{file}"
+  puts " => skipping #{file}"
 end
 
 def skip_identical_file(file)
-  puts " => skipping identical ~/#{file}"
+  puts " => skipping identical #{file}"
+end
+
 def clone_repo(repo, target)
   puts " => git cloning #{repo}"
   path = File.join(ENV['HOME'], target)
