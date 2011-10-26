@@ -9,7 +9,11 @@
   set guioptions-=L
 
 " go full screen like you mean it
-  set fuoptions=maxvert,maxhorz
+  if has('win32')
+    au GUIEnter * simalt ~x
+  elseif has('mac')
+    set fuoptions=maxvert,maxhorz
+  endif
 
 " use a big, pretty font
   set guifont=Monaco:h15
