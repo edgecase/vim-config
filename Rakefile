@@ -6,7 +6,7 @@ require 'fileutils'
 WINDOW_FILE_TRANSLATION =
   { '.vimrc'  => '_vimrc',
     '.gvimrc' => '_gvimrc',
-    '.vim'    => '_vimfiles' }
+    '.vim'    => 'vimfiles' }
 
 MAC_FILE_TRANSLATION =
   { '.vimrc'  => '.vimrc',
