@@ -15,6 +15,11 @@
     set fuoptions=maxvert,maxhorz
   endif
 
+" set a valid swap file location
+  if has('win32')
+    set directory=%TEMP%
+  endif
+
 " use a big, pretty font
   set guifont=Monaco:h15
 
