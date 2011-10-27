@@ -20,6 +20,12 @@
     set directory=%TEMP%
   endif
 
+" turn off beeping and prevent screen lighting flash
+  if has('win32')
+    set noerrorbells visualbell t_vb=
+    autocmd GUIEnter * set visualbell t_vb=
+  endif
+
 " use a big, pretty font
   set guifont=Monaco:h15
 
