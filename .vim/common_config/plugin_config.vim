@@ -178,3 +178,7 @@
     let g:surround_45 = "<% \r %>"
     " = to surround with output erb tag
     let g:surround_61 = "<%= \r %>"
+
+" Clojure Highlighting"
+  Bundle "https://github.com/vim-scripts/VimClojure.git"
+  autocmd BufNewFile,BufRead *.clj set filetype=clojure

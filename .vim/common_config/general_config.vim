@@ -107,3 +107,6 @@
 
 " JSON is JS
   au BufNewFile,BufRead *.json set ai filetype=javascript
+
+" different color for each paren pairs
+let vimclojure#ParenRainbow  = 1
