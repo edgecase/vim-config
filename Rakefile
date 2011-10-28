@@ -3,15 +3,18 @@ require 'rake/win32'
 require 'pathname'
 require 'fileutils'
 
-WINDOW_FILES =
-  { '.vimrc'  => '_vimrc',
-    '.gvimrc' => '_gvimrc',
-    '.vim'    => 'vimfiles' }
-
 MAC_FILES =
-  { '.vimrc'  => '.vimrc',
-    '.gvimrc' => '.gvimrc',
-    '.vim'    => '.vim' }
+  { '.vimrc'  => '~/.vimrc',
+    '.gvimrc' => '~/.gvimrc',
+    '.vim'    => '~/.vim' }
+
+WINDOW_FILES =
+  { '.vimrc'           => '~/_vimrc',
+    '.gvimrc'          => '~/_gvimrc',
+    '.vim'             => '~/vimfiles',
+    'windows/ack.bat'  => 'c:\RailsInstaller\Git\cmd\ack.bat',
+    'windows/ack.pl'   => 'c:\RailsInstaller\Git\cmd\ack.pl',
+    'windows/curl.cmd' => 'c:\RailsInstaller\Git\cmd\curl.cmd' }
 
 desc "Install vim configuration and plugin files"
 task :default do
@@ -29,9 +32,8 @@ end
 
 desc "Install vundle for vim plugins"
 task :vundle do
-  target = Installer.home_join(platform_files['.vim'], 'vundle.git')
+  target = "#{platform_files['.vim']}/vundle.git"
   Installer.git_clone('http://github.com/gmarik/vundle.git', target)
-
   puts "\nIf this is a new installation, open vim and type ':BundleInstall' to install necessary plugins."
 end
 
@@ -93,12 +95,20 @@ class Installer
   end
 
   def self.git_clone(repo, target)
-    FileUtils.rm_rf(target) if File.exists?(target)
+    path = translate_path(target)
+    FileUtils.rm_rf(path) if File.exists?(path)
     `git clone ""#{repo}"" "#{target}"`
   end
 
   def self.home_join(*files)
     normalize(File.join(ENV['HOME'], files))
+  end
+
+  def self.translate_path(path)
+    if path[0].chr === '~'
+      path[0] = ENV['HOME']
+    end
+    normalize(path)
   end
 
   def self.normalize(path)
@@ -112,8 +122,8 @@ class Translation
   attr_accessor :source, :target
 
   def initialize(source_path, target_path)
-    @source = source_file_path(source_path)
-    @target = home_file_path(target_path)
+    @source = source_pathname(source_path)
+    @target = target_pathname(target_path)
   end
 
   def link
@@ -143,12 +153,12 @@ class Translation
 
   private
 
-  def home_file_path(file)
-    path = File.join(ENV['HOME'], file)
-    Pathname.new(normalize(path))
+  def target_pathname(file)
+    path = Installer.translate_path(file)
+    Pathname.new(path)
   end
 
-  def source_file_path(file)
+  def source_pathname(file)
     path = File.dirname(__FILE__)
     Pathname.new(normalize(File.join(path, file)))
   end
