@@ -7,8 +7,8 @@ class Translation
   attr_accessor :source, :target
 
   def initialize(source_path, target_path)
-    @source = source_pathname(source_path)
-    @target = target_pathname(target_path)
+    @source = pathname(source_path)
+    @target = pathname(target_path)
   end
 
   def link
@@ -38,16 +38,9 @@ class Translation
 
   private
 
-  def target_pathname(file)
+  def pathname(file)
     path = Installer.translate_path(file)
-    Pathname.new(path)
+    Pathname.new(path).expand_path
   end
 
-  def source_pathname(file)
-    #path = File.dirname(__FILE__)
-    #Pathname.new(normalize(File.join(path, file)))
-    #file_path = File.join(File.dirname(__FILE__), file)
-    path      = Installer.translate_path(file)
-    Pathname.new(path)
-  end
 end
