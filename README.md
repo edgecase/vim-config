@@ -16,14 +16,13 @@ The Windows version of the Vim configuration uses rake (for installation) git (f
 
 ## Install
 
-Windows users: be sure to use **RailsInstaller** > **Command Prompt with Ruby and Rails** instead of the normal command prompt.
+Windows users: be sure to use **RailsInstaller** > **Command Prompt with Ruby and Rails** to perform these installation steps instead of the normal command prompt.
 
 1. `git clone git://github.com/edgecase/vim-config.git`
 2. `cd vim-config`
-3. (beta!) Get the windows branch: `git checkout windows`
-4. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
-5. `vim` (or in Windows, `gvim`)
-6. `:BundleInstall` (This will clone and install all of the plugins from github.)
+3. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
+4. `vim` (or in Windows: `gvim`)
+5. `:BundleInstall` (This will clone and install all of the plugins from github.)
 
 ## Customizing
 
