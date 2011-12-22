@@ -11,15 +11,14 @@
   Bundle "git://github.com/tpope/vim-endwise.git"
   Bundle "git://github.com/tpope/vim-fugitive.git"
   Bundle "git://github.com/tpope/vim-haml.git"
-  Bundle "git://github.com/digitaltoad/vim-jade.git"
   Bundle "git://github.com/pangloss/vim-javascript.git"
   Bundle "git://github.com/vim-scripts/L9.git"
   Bundle "git://github.com/tpope/vim-rake.git"
   Bundle "git://github.com/vim-ruby/vim-ruby.git"
   Bundle "git://github.com/ervandew/supertab.git"
-  Bundle "git://github.com/tsaleh/vim-tcomment.git"
+  Bundle "git://github.com/tomtom/tcomment_vim.git"
   Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
-  Bundle "git://github.com/mhz/vim-matchit.git"
+  Bundle "git://github.com/tsaleh/vim-matchit.git"
   Bundle "git://github.com/kana/vim-textobj-user.git"
   Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
   Bundle "git://github.com/tpope/vim-repeat.git"
@@ -64,9 +63,9 @@
 " Markdown syntax highlighting
   Bundle "git://github.com/tpope/vim-markdown.git"
     augroup mkd
-      autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
-      autocmd BufRead *.md  set ai formatoptions=tcroqn2 comments=n:>
-      autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:>
+      autocmd BufNewFile,BufRead *.mkd      set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
+      autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
+      autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
     augroup END
 
 
@@ -88,10 +87,10 @@
     function! CustomTabularPatterns()
       if exists('g:tabular_loaded')
         AddTabularPattern! symbols         / :/l0
-        AddTabularPattern! hash            /=>/
+        AddTabularPattern! hash            /^[^>]*\zs=>/
         AddTabularPattern! chunks          / \S\+/l0
         AddTabularPattern! assignment      / = /l0
-        AddTabularPattern! comma           /,\zs /l0
+        AddTabularPattern! comma           /^[^,]*,/l1
         AddTabularPattern! colon           /:\zs /l0
         AddTabularPattern! options_hashes  /:\w\+ =>/
       endif
@@ -100,7 +99,7 @@
     autocmd VimEnter * call CustomTabularPatterns()
 
     " shortcut to align text with Tabular
-    map <Leader>a :Tabular<space>
+    map <Leader>a :Tabularize<space>
 
 
 " Fuzzy finder for quickling opening files / buffers
@@ -109,7 +108,7 @@
     let g:fuf_coveragefile_exclude = '\v\~$|' .
     \                                '\.(o|exe|dll|bak|swp|log|sqlite3|png|gif|jpg)$|' .
     \                                '(^|[/\\])\.(hg|git|bzr|bundle)($|[/\\])|' .
-    \                                '(^|[/\\])(log|tmp|vendor|system|doc|coverage|build)($|[/\\])'
+    \                                '(^|[/\\])(log|tmp|vendor|system|doc|coverage|build|generated)($|[/\\])'
 
     let g:fuf_keyOpenTabpage = '<D-CR>'
 
@@ -117,15 +116,6 @@
     nmap <Leader>b :FufBuffer<CR>
     nmap <Leader>f :FufRenewCache<CR>
     nmap <Leader>T :FufTagWithCursorWord!<CR>
-
-" ShowMarks to visually show placement of marks in files
-  Bundle "git://github.com/garbas/vim-showmarks.git"
-    let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-    highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
-    highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
-    highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
-    highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 
 
 " ZoomWin to fullscreen a particular buffer without losing others
@@ -187,3 +177,12 @@
     let g:surround_45 = "<% \r %>"
     " = to surround with output erb tag
     let g:surround_61 = "<%= \r %>"
+
+" Clojure Highlighting"
+  Bundle "https://github.com/vim-scripts/VimClojure.git"
+  autocmd BufNewFile,BufRead *.clj set filetype=clojure
+
+
+" Jade Highlighting"
+  Bundle "git://github.com/digitaltoad/vim-jade.git"
+  autocmd BufNewFile,BufRead *.jade set filetype=jade

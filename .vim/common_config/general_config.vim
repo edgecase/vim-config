@@ -104,3 +104,9 @@
 
 " Thorfile, Rakefile, Vagrantfile, and Gemfile are Ruby
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+
+" JSON is JS
+  au BufNewFile,BufRead *.json set ai filetype=javascript
+
+" different color for each paren pairs
+let vimclojure#ParenRainbow  = 1

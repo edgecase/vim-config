@@ -15,7 +15,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "railscasts2"
+let g:colors_name = "mailscasts"
 
 " Colors
 " Brown        #BC9458
@@ -26,10 +26,10 @@ let g:colors_name = "railscasts2"
 " Light Green  #A5C261
 " Tan          #FFC66D
 
-hi Normal                    guifg=#E6E1DC guibg=#2B2B2B
+hi Normal                    guifg=#E6E1DC guibg=#1B1B1B
 hi Cursor                    guibg=#FFFFFF
 hi CursorLine                guibg=#333435
-hi LineNr                    guifg=#888888 guibg=#DEDEDE
+hi LineNr                    guifg=#BBBBBB
 hi Search                    guibg=#5A647E
 hi Visual                    guibg=#5A647E
 
