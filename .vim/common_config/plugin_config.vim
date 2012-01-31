@@ -25,6 +25,11 @@
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
   Bundle "git://github.com/wgibbs/vim-irblack.git"
 
+" Less
+  Bundle "git://github.com/groenewege/vim-less.git"
+    au BufNewFile,BufRead *.less set filetype=less
+
+" Mustache
   Bundle "git://github.com/juvenn/mustache.vim.git"
     " Copied from the plugin; not sure why it isn't working normally
     au BufNewFile,BufRead *.mustache,*.handlebars,*.hbs set filetype=mustache
