@@ -24,6 +24,7 @@
   Bundle "git://github.com/tpope/vim-repeat.git"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
   Bundle "git://github.com/wgibbs/vim-irblack.git"
+  Bundle "git://github.com/groenewege/vim-less.git"
 
 " Less
   Bundle "git://github.com/groenewege/vim-less.git"
