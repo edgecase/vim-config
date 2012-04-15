@@ -311,10 +311,10 @@ call s:X("LineNr","605958","151515","none","Black","")
 call s:X("Comment","888888","","italic","Grey","")
 call s:X("Todo","808080","","bold","White","Black")
 
-call s:X("StatusLine","000000","dddddd","italic","Black","White")
-call s:X("StatusLineNC","ffffff","403c41","italic","White","Black")
-call s:X("VertSplit","777777","403c41","italic","Black","Black")
 call s:X("WildMenu","f0a0c0","302028","","Magenta","")
+call s:X("StatusLine","f0f0f0","F0F0F0","italic","","")
+call s:X("StatusLineNC","a0a0a0","F8F8F8","italic","","")
+call s:X("VertSplit","F8F8F8","F8F8F8","italic","","")
 
 call s:X("Folded","a0a8b0","384048","italic","Black","")
 call s:X("FoldColumn","a0a8b0","384048","","","Black")
