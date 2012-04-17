@@ -26,6 +26,10 @@
   Bundle "git://github.com/wgibbs/vim-irblack.git"
   Bundle "git://github.com/wavded/vim-stylus.git"
 
+  Bundle "git://github.com/smerrill/vim-arduino.git"
+    au BufNewFile,BufRead *.pde set filetype=arduino
+    au BufNewFile,BufRead *.ino set filetype=arduino
+
 " Less
   Bundle "git://github.com/groenewege/vim-less.git"
     au BufNewFile,BufRead *.less set filetype=less
