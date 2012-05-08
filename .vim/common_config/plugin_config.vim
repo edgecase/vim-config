@@ -59,6 +59,10 @@
   Bundle "git://github.com/kchmck/vim-coffee-script.git"
     au BufNewFile,BufRead *.coffee set filetype=coffee
 
+" Scala
+  Bundle "https://github.com/rosstimson/scala-vim-support.git"
+    au BufNewFile,BufRead *.scala set filetype=scala
+
 
 " ACK
   Bundle "git://github.com/mileszs/ack.vim.git"
