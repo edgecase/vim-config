@@ -60,7 +60,7 @@
     au BufNewFile,BufRead *.coffee set filetype=coffee
 
 " Scala
-  Bundle "https://github.com/rosstimson/scala-vim-support.git"
+  Bundle "git://github.com/rosstimson/scala-vim-support.git"
     au BufNewFile,BufRead *.scala set filetype=scala
 
 
