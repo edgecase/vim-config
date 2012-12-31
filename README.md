@@ -87,17 +87,16 @@ Common practice is to symlink a folder containing your custom configuration file
 * `Lidsa` - insert some lorem ipsum text
 * `rdebug` - insert ruby specfic debugger statement
 
-## FuzzyFinder
+## CtrlP
 
-Provides convenient ways to quickly reach the
-buffer/file/command/bookmark/tag you want. FuzzyFinder searches with the
-fuzzy/partial pattern to which it converted an entered pattern.
+* `<C-p>` to invoke CtrlP in find file mode
 
-* `<leader>t` - fuzzy find files
-* `<leader>b` - fuzzy find open buffers
-* `<leader>T` - use fuzzy finder to navigate via tags instead of built-in tag navigation
-* `<C-j>` - open selected item in window in horizontal split
-* `<C-k>` - open selected item in vertical split
+Once open
+
+* `<C-f>` and `<C-b>` to cycle between MRU, File and Buffer modes
+* `<C-d>` to swtich to filename only search instead of full path
+
+Uses the default keybinding, please refer to https://github.com/kien/ctrlp.vim for complete mappings
 
 ## Unimpaired
 
