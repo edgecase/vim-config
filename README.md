@@ -87,10 +87,10 @@ Common practice is to symlink a folder containing your custom configuration file
 * `Lidsa` - insert some lorem ipsum text
 * `rdebug` - insert ruby specfic debugger statement
 
-## FuzzyFinder
+## CtrlP
 
 Provides convenient ways to quickly reach the
-buffer/file/command/bookmark/tag you want. FuzzyFinder searches with the
+buffer/file/command/bookmark/tag you want. CtrlP searches with the
 fuzzy/partial pattern to which it converted an entered pattern.
 
 * `<leader>t` - fuzzy find files
