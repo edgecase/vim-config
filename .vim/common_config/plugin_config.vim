@@ -25,6 +25,18 @@
   Bundle "git://github.com/wgibbs/vim-irblack.git"
   Bundle "git://github.com/wavded/vim-stylus.git"
 
+  " CtrlP - with FuzzyFinder compatible keymaps
+  Bundle "git://github.com/kien/ctrlp.vim.git"
+    nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
+    nnoremap <Leader>t :<C-U>CtrlP<CR>
+    nnoremap <Leader>T :<C-U>CtrlPTag<CR>
+    let g:ctrlp_prompt_mappings = {
+        \ 'PrtSelectMove("j")':   ['<down>'],
+        \ 'PrtSelectMove("k")':   ['<up>'],
+        \ 'AcceptSelection("h")': ['<c-j>'],
+        \ 'AcceptSelection("v")': ['<c-k>', '<RightMouse>'],
+        \ }
+
   Bundle "git://github.com/smerrill/vim-arduino.git"
     au BufNewFile,BufRead *.pde set filetype=arduino
     au BufNewFile,BufRead *.ino set filetype=arduino
@@ -124,23 +136,6 @@
 
     " shortcut to align text with Tabular
     map <Leader>a :Tabularize<space>
-
-
-" Fuzzy finder for quickling opening files / buffers
-  Bundle "git://github.com/clones/vim-fuzzyfinder.git"
-    let g:fuf_coveragefile_prompt = '>GoToFile[]>'
-    let g:fuf_coveragefile_exclude = '\v\~$|' .
-    \                                '\.(o|exe|dll|bak|swp|log|sqlite3|png|gif|jpg)$|' .
-    \                                '(^|[/\\])\.(hg|git|bzr|bundle)($|[/\\])|' .
-    \                                '(^|[/\\])(log|tmp|vendor|system|doc|coverage|build|generated|node_modules)($|[/\\])'
-
-    let g:fuf_keyOpenTabpage = '<D-CR>'
-
-    nmap <Leader>t :FufCoverageFile<CR>
-    nmap <Leader>b :FufBuffer<CR>
-    nmap <Leader>f :FufRenewCache<CR>
-    nmap <Leader>T :FufTagWithCursorWord!<CR>
-
 
 " ZoomWin to fullscreen a particular buffer without losing others
   Bundle "git://github.com/vim-scripts/ZoomWin.git"
