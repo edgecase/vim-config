@@ -55,7 +55,6 @@
   nnoremap <Leader><space> :noh<cr>
 
 " make tab key match bracket pairs
-  nnoremap <tab> %
   vnoremap <tab> %
 
 " buffer resizing mappings (shift + arrow key)
