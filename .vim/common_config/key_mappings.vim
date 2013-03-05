@@ -54,10 +54,6 @@
 " map spacebar to clear search highlight
   nnoremap <Leader><space> :noh<cr>
 
-" make tab key match bracket pairs
-  nnoremap <tab> %
-  vnoremap <tab> %
-
 " buffer resizing mappings (shift + arrow key)
   nnoremap <S-Up> <c-w>+
   nnoremap <S-Down> <c-w>-
