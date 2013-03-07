@@ -36,6 +36,8 @@
         \ 'AcceptSelection("h")': ['<c-j>'],
         \ 'AcceptSelection("v")': ['<c-k>', '<RightMouse>'],
         \ }
+    " respect the .gitignore
+    let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
   Bundle "git://github.com/smerrill/vim-arduino.git"
     au BufNewFile,BufRead *.pde set filetype=arduino
