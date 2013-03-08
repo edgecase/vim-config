@@ -36,6 +36,8 @@
         \ 'AcceptSelection("h")': ['<c-j>'],
         \ 'AcceptSelection("v")': ['<c-k>', '<RightMouse>'],
         \ }
+    " respect the .gitignore
+    let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
   Bundle "git://github.com/smerrill/vim-arduino.git"
     au BufNewFile,BufRead *.pde set filetype=arduino
@@ -157,7 +159,10 @@
   Bundle "git://github.com/scrooloose/syntastic.git"
     let g:syntastic_enable_signs=1
     let g:syntastic_quiet_warnings=1
-    let g:syntastic_disabled_filetypes = ['sass']
+    " syntastic is too slow for haml and sass
+    let g:syntastic_mode_map = { 'mode': 'active',
+                               \ 'active_filetypes': [],
+                               \ 'passive_filetypes': ['haml','scss','sass'] }
 
 
 " gist-vim for quickly creating gists
