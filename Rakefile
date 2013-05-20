@@ -33,7 +33,9 @@ desc "Install vundle for vim plugins"
 task :vundle do
   target = "#{platform_files['.vim']}/vundle.git"
   Installer.git_clone('http://github.com/gmarik/vundle.git', target)
-  puts "\nIf this is a new installation, open vim and type ':BundleInstall' to install necessary plugins."
+  puts "Running BundleInstall to install plugins...this will take a couple minutes."
+  `vim +BundleInstall +qall`
+  puts "vim plugins installed."
 end
 
 def platform_files
