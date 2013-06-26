@@ -26,7 +26,7 @@
   Bundle "git://github.com/wavded/vim-stylus.git"
   Bundle "git://github.com/skammer/vim-css-color.git"
 
-  " CtrlP - with FuzzyFinder compatible keymaps
+" CtrlP - with FuzzyFinder compatible keymaps
   Bundle "git://github.com/kien/ctrlp.vim.git"
     nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
     nnoremap <Leader>t :<C-U>CtrlP<CR>
@@ -40,6 +40,7 @@
     " respect the .gitignore
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
+" Compile and deploy Arduino (*.pde) sketches directly from Vim
   Bundle "git://github.com/smerrill/vim-arduino.git"
     au BufNewFile,BufRead *.pde set filetype=arduino
     au BufNewFile,BufRead *.ino set filetype=arduino
@@ -167,6 +168,7 @@
 
 
 " gist-vim for quickly creating gists
+  Bundle "git://github.com/mattn/webapi-vim.git"
   Bundle "git://github.com/mattn/gist-vim.git"
     if has("mac")
       let g:gist_clip_command = 'pbcopy'
