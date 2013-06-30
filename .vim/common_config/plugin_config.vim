@@ -84,6 +84,7 @@
 " AG aka The Silver Searcher
   Bundle 'git://github.com/rking/ag.vim.git'
     nmap g/ :Ag!<space>
+    nmap g* :Ag! -w <C-R><C-W><space>
     nmap ga :AgAdd!<space>
     nmap gn :cnext<CR>
     nmap gp :cprev<CR>
