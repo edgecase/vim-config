@@ -81,6 +81,7 @@ Common practice is to symlink a folder containing your custom configuration file
 
 * `gs` - jump to schema file
 * `gr` - jump to routes file
+* `gm` - jump to Gemfile
 
 #### Macros (from within insert mode type abbreviation followed by punctuation or space)
 
