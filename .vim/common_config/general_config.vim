@@ -5,7 +5,8 @@
   syntax on
 
 " default color scheme
-  color desertink
+  set background=dark
+  color twilight2
 
 " don't wrap long lines
   set nowrap
