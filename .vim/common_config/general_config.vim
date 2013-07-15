@@ -105,6 +105,12 @@
 " Thorfile, Rakefile, Vagrantfile, and Gemfile are Ruby
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
+" hb is handlebars
+  au BufNewFile,BufRead *.hb set ai filetype=handlebars
+
+" hbs is handlebars
+  au BufNewFile,BufRead *.hbs set ai filetype=handlebars
+
 " JSON is JS
   au BufNewFile,BufRead *.json set ai filetype=javascript
 
