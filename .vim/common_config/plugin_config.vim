@@ -25,6 +25,11 @@
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
   Bundle "git://github.com/wgibbs/vim-irblack.git"
 
+" Elixir
+  Bundle "git://github.com/elixir-lang/vim-elixir.git"
+    au bufread,bufnewfile *.ex,*.exs set filetype=elixir
+    au filetype elixir setl sw=2 sts=2 et iskeyword+=!,?
+
 
 " Coffee script
   Bundle "git://github.com/kchmck/vim-coffee-script.git"
