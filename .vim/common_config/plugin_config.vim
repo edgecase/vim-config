@@ -28,6 +28,13 @@
   " Use Aaron Baker's Fork to add SASS/SCSS color highlighting
   Bundle "git@github.com:bakis2011/vim-css-color.git"
 
+" Dash Searching"
+  Bundle "git@github.com:rizzatti/funcoo.vim.git"
+  Bundle "git@github.com:rizzatti/dash.vim.git"
+    nmap <Leader>qs <Plug>DashSearch
+    nmap <Leader>qa <Plug>DashGlobalSearch
+
+
 " CtrlP - with FuzzyFinder compatible keymaps
   Bundle "git://github.com/kien/ctrlp.vim.git"
     nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
