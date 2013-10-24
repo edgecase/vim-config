@@ -47,6 +47,10 @@
     au BufNewFile,BufRead *.pde set filetype=arduino
     au BufNewFile,BufRead *.ino set filetype=arduino
 
+" Go
+  Bundle "git://github.com/jnwhiteh/vim-golang.git"
+    au BufNewFile,BufRead *.go set filetype=go
+
 " Mustache
   Bundle "git://github.com/juvenn/mustache.vim.git"
     " Copied from the plugin; not sure why it isn't working normally
