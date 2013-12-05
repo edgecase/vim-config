@@ -226,3 +226,7 @@
 " Jade Highlighting"
   Bundle "git://github.com/digitaltoad/vim-jade.git"
   autocmd BufNewFile,BufRead *.jade set filetype=jade
+
+" Scala Highlighting"
+  Bundle "git://github.com/derekwyatt/vim-scala.git"
+  autocmd BufNewFile,BufRead *.scala set filetype=scala
