@@ -101,18 +101,6 @@
     map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
     map <Leader>. :TagbarToggle<CR>
 
-
-" Ruby focused unit test (wrapped in an if-loaded because it doesn't like
-" being loaded twice)
-  if !exists(':RunRubyFocusedUnitTest')
-    Bundle "git://github.com/drewolson/ruby_focused_unit_test_vim.git"
-      nmap <Leader>ra :wa<CR> :RunAllRubyTests<CR>
-      nmap <Leader>rc :wa<CR> :RunRubyFocusedContext<CR>
-      nmap <Leader>rf :wa<CR> :RunRubyFocusedUnitTest<CR>
-      nmap <Leader>rl :wa<CR> :RunLastRubyTest<CR>
-  endif
-
-
 " Markdown syntax highlighting
   Bundle "git://github.com/tpope/vim-markdown.git"
     augroup mkd
@@ -219,7 +207,12 @@
     let g:surround_61 = "<%= \r %>"
 
 " Clojure Highlighting"
-  Bundle "https://github.com/vim-scripts/VimClojure.git"
+  Bundle 'paredit.vim'
+  let g:paredit_leader= '\'
+  Bundle "git://github.com/tpope/vim-fireplace.git"
+  Bundle "git://github.com/tpope/vim-classpath.git"
+  Bundle "git://github.com/guns/vim-clojure-static.git"
+  Bundle "git@github.com:amdt/vim-niji.git"
   autocmd BufNewFile,BufRead *.clj set filetype=clojure
 
 
