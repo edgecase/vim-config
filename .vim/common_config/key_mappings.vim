@@ -67,3 +67,7 @@
 " insert the path of currently edited file into a command
 " Command mode: Ctrl-P
   cmap <C-S-P> <C-R>=expand("%:p:h") . "/" <cr>
+
+" jump to far right or left of line
+  map L $
+  map H ^

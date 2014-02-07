@@ -24,10 +24,14 @@
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
   Bundle "git://github.com/wgibbs/vim-irblack.git"
   Bundle "git://github.com/wavded/vim-stylus.git"
-  " Bundle git://github.com/skammer/vim-css-color.git
-  " Use Aaron Baker's Fork to add SASS/SCSS color highlighting
-  Bundle "git@github.com:bakis2011/vim-css-color.git"
   Bundle "git@github.com:tpope/vim-abolish.git"
+
+" Dash Searching"
+  Bundle "git@github.com:rizzatti/funcoo.vim.git"
+  Bundle "git@github.com:rizzatti/dash.vim.git"
+    nmap <Leader>qs <Plug>DashSearch
+    nmap <Leader>qa <Plug>DashGlobalSearch
+
 
 " CtrlP - with FuzzyFinder compatible keymaps
   Bundle "git://github.com/kien/ctrlp.vim.git"
@@ -47,6 +51,10 @@
   Bundle "git://github.com/smerrill/vim-arduino.git"
     au BufNewFile,BufRead *.pde set filetype=arduino
     au BufNewFile,BufRead *.ino set filetype=arduino
+
+" Go
+  Bundle "git://github.com/jnwhiteh/vim-golang.git"
+    au BufNewFile,BufRead *.go set filetype=go
 
 " Mustache
   Bundle "git://github.com/juvenn/mustache.vim.git"
@@ -173,7 +181,7 @@
 " Syntastic for catching syntax errors on save
   Bundle "git://github.com/scrooloose/syntastic.git"
     let g:syntastic_enable_signs=1
-    let g:syntastic_quiet_warnings=1
+    let g:syntastic_quiet_messages = {'level': 'warning'}
     " syntastic is too slow for haml and sass
     let g:syntastic_mode_map = { 'mode': 'active',
                                \ 'active_filetypes': [],
@@ -226,3 +234,7 @@
 " Jade Highlighting"
   Bundle "git://github.com/digitaltoad/vim-jade.git"
   autocmd BufNewFile,BufRead *.jade set filetype=jade
+
+" Scala Highlighting"
+  Bundle "git://github.com/derekwyatt/vim-scala.git"
+  autocmd BufNewFile,BufRead *.scala set filetype=scala
