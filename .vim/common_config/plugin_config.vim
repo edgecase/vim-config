@@ -27,6 +27,7 @@
   " Bundle git://github.com/skammer/vim-css-color.git
   " Use Aaron Baker's Fork to add SASS/SCSS color highlighting
   Bundle "git@github.com:bakis2011/vim-css-color.git"
+  Bundle "git@github.com:tpope/vim-abolish.git"
 
 " CtrlP - with FuzzyFinder compatible keymaps
   Bundle "git://github.com/kien/ctrlp.vim.git"
