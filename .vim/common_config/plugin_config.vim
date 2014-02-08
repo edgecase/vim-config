@@ -238,3 +238,8 @@
 " Scala Highlighting"
   Bundle "git://github.com/derekwyatt/vim-scala.git"
   autocmd BufNewFile,BufRead *.scala set filetype=scala
+
+" Elixir plugin
+  Bundle "git://github.com/elixir-lang/vim-elixir.git"
+    au BufNewFile,BufRead *.ex set filetype=elixir
+    au BufNewFile,BufRead *.exs set filetype=elixir
