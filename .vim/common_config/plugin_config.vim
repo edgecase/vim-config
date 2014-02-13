@@ -215,8 +215,14 @@
     " = to surround with output erb tag
     let g:surround_61 = "<%= \r %>"
 
+
 " Clojure Highlighting"
-  Bundle "https://github.com/vim-scripts/VimClojure.git"
+  Bundle 'paredit.vim'
+  let g:paredit_leader= '\'
+  Bundle "git://github.com/tpope/vim-fireplace.git"
+  Bundle "git://github.com/tpope/vim-classpath.git"
+  Bundle "git://github.com/guns/vim-clojure-static.git"
+  Bundle "git@github.com:amdt/vim-niji.git"
   autocmd BufNewFile,BufRead *.clj set filetype=clojure
 
 
