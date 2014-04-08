@@ -71,7 +71,7 @@
 
 " Handlebars
   Bundle "git://github.com/nono/vim-handlebars.git"
-    au BufNewFile,BufRead *.hbs set filetype=handlebars
+    au BufNewFile,BufRead *.hbs,*.hb set filetype=handlebars
 
 " Stylus
   Bundle "git://github.com/wavded/vim-stylus.git"
