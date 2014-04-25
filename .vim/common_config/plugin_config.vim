@@ -23,7 +23,7 @@
   Bundle "git://github.com/tpope/vim-repeat.git"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
   Bundle "git://github.com/wgibbs/vim-irblack.git"
-  Bundle "git://github.com/wavded/vim-stylus.git"
+" Bundle "git://github.com/wavded/vim-stylus.git"
   Bundle "git@github.com:tpope/vim-abolish.git"
 
 " Dash Searching"
