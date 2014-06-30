@@ -279,7 +279,7 @@ The following tabular patterns have been added:
 ## indent\_object
 
 Indent object creates a "text object" that is relative to the current
-ident. Text objects work inside of visual mode, and with `c` (change),
+indent. Text objects work inside of visual mode, and with `c` (change),
 `d` (delete) and `y` (yank). For instance, try going into a method in
 normal mode, and type `v ii`. Then repeat `ii`.
 
