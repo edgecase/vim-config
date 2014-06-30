@@ -25,6 +25,7 @@
   Bundle "git://github.com/wgibbs/vim-irblack.git"
 " Bundle "git://github.com/wavded/vim-stylus.git"
   Bundle "git@github.com:tpope/vim-abolish.git"
+  Bundle "git@github.com:christoomey/vim-tmux-navigator.git"
 
 " Dash Searching"
   Bundle "git@github.com:rizzatti/funcoo.vim.git"
