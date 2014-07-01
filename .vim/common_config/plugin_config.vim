@@ -223,6 +223,7 @@
   Bundle "git://github.com/tpope/vim-fireplace.git"
   Bundle "git://github.com/tpope/vim-classpath.git"
   Bundle "git://github.com/guns/vim-clojure-static.git"
+  Bundle "git://github.com/vim-scripts/paredit.vim"
   Bundle "git@github.com:amdt/vim-niji.git"
   autocmd BufNewFile,BufRead *.clj set filetype=clojure
 
