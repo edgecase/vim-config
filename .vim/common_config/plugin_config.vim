@@ -226,6 +226,7 @@
   Bundle "git://github.com/vim-scripts/paredit.vim"
   Bundle "git@github.com:amdt/vim-niji.git"
   autocmd BufNewFile,BufRead *.clj set filetype=clojure
+  autocmd BufNewFile,BufRead *.edn set filetype=clojure
 
 
 " Jade Highlighting"
