@@ -218,8 +218,6 @@
 
 
 " Clojure Highlighting"
-  Bundle 'paredit.vim'
-  let g:paredit_leader= '\'
   Bundle "git://github.com/tpope/vim-fireplace.git"
   Bundle "git://github.com/tpope/vim-classpath.git"
   Bundle "git://github.com/guns/vim-clojure-static.git"
@@ -227,6 +225,8 @@
   Bundle "git@github.com:amdt/vim-niji.git"
   autocmd BufNewFile,BufRead *.clj set filetype=clojure
   autocmd BufNewFile,BufRead *.edn set filetype=clojure
+
+  let g:paredit_leader= '\'
 
 
 " Jade Highlighting"
