@@ -57,11 +57,6 @@
   Bundle "git://github.com/jnwhiteh/vim-golang.git"
     au BufNewFile,BufRead *.go set filetype=go
 
-" Mustache
-  Bundle "git://github.com/juvenn/mustache.vim.git"
-    " Copied from the plugin; not sure why it isn't working normally
-    au BufNewFile,BufRead *.mustache,*.handlebars,*.hbs set filetype=mustache
-
 " Slim
   Bundle "git://github.com/slim-template/vim-slim.git"
     au BufNewFile,BufRead *.slim set filetype=slim
@@ -70,9 +65,9 @@
   Bundle "git://github.com/groenewege/vim-less.git"
     au BufNewFile,BufRead *.less set filetype=less
 
-" Handlebars
-  Bundle "git://github.com/nono/vim-handlebars.git"
-    au BufNewFile,BufRead *.hbs,*.hb set filetype=handlebars
+" Handlebars, Mustache, and Friends
+  Bundle "git://github.com/mustache/vim-mustache-handlebars.git"
+  au  BufNewFile,BufRead *.mustache,*.handlebars,*.hbs,*.hogan,*.hulk,*.hjs set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 
 " Stylus
   Bundle "git://github.com/wavded/vim-stylus.git"
