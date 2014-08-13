@@ -6,7 +6,7 @@
 
 " default color scheme
   set background=dark
-  color twilight2
+  colorscheme wombat
 
 " don't wrap long lines
   set nowrap
@@ -116,3 +116,4 @@
 
 " different color for each paren pairs
 let vimclojure#ParenRainbow  = 1
+

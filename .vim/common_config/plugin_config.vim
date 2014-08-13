@@ -3,9 +3,6 @@
 
 " Plugins requiring no additional configuration or keymaps
   Bundle "git://github.com/oscarh/vimerl.git"
-  Bundle "git://github.com/tpope/vim-git.git"
-  Bundle "git://github.com/harleypig/vcscommand.vim.git"
-  Bundle "git://github.com/altercation/vim-colors-solarized.git"
   Bundle "git://github.com/tpope/vim-cucumber.git"
   Bundle "git://github.com/tpope/vim-endwise.git"
   Bundle "git://github.com/tpope/vim-fugitive.git"
@@ -22,10 +19,7 @@
   Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
   Bundle "git://github.com/tpope/vim-repeat.git"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
-  Bundle "git://github.com/wgibbs/vim-irblack.git"
-" Bundle "git://github.com/wavded/vim-stylus.git"
   Bundle "git://github.com/tpope/vim-abolish.git"
-  Bundle "git://github.com/christoomey/vim-tmux-navigator.git"
 
 " Dash Searching"
   Bundle "git://github.com/rizzatti/funcoo.vim.git"
@@ -76,17 +70,6 @@
 " Coffee script
   Bundle "git://github.com/kchmck/vim-coffee-script.git"
     au BufNewFile,BufRead *.coffee set filetype=coffee
-
-
-" ACK
-" Bundle "git://github.com/mileszs/ack.vim.git"
-"   nmap g/ :Ack!<space>
-"   nmap g* :Ack! -w <C-R><C-W><space>
-"   nmap ga :AckAdd!<space>
-"   nmap gn :cnext<CR>
-"   nmap gp :cprev<CR>
-"   nmap gq :ccl<CR>
-"   nmap gl :cwindow<CR>
 
 " AG aka The Silver Searcher
   Bundle 'git://github.com/rking/ag.vim.git'
@@ -236,3 +219,4 @@
   Bundle "git://github.com/elixir-lang/vim-elixir.git"
     au BufNewFile,BufRead *.ex set filetype=elixir
     au BufNewFile,BufRead *.exs set filetype=elixir
+
