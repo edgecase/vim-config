@@ -1392,7 +1392,7 @@ sub get_command_line_options {
             my $type = shift;
             my $wanted = ($type =~ s/^no//) ? 0 : 1; # must not be undef later
 
-            if ( exists $type_wanted{ $type } ) {
+            wf ( exists $type_wanted{ $type } ) {
                 $type_wanted{ $type } = $wanted;
             }
             else {

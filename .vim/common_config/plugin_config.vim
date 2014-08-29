@@ -2,24 +2,51 @@
 " install plugins.
 
 " Plugins requiring no additional configuration or keymaps
+  Bundle "git://github.com/kana/vim-textobj-user.git"
+  Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
+  Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
   Bundle "git://github.com/oscarh/vimerl.git"
-  Bundle "git://github.com/tpope/vim-cucumber.git"
+  Bundle "git://github.com/pangloss/vim-javascript.git"
+  Bundle "git://github.com/tomtom/tcomment_vim.git"
   Bundle "git://github.com/tpope/vim-endwise.git"
   Bundle "git://github.com/tpope/vim-fugitive.git"
   Bundle "git://github.com/tpope/vim-haml.git"
-  Bundle "git://github.com/pangloss/vim-javascript.git"
-  Bundle "git://github.com/vim-scripts/L9.git"
   Bundle "git://github.com/tpope/vim-rake.git"
-  Bundle "git://github.com/vim-ruby/vim-ruby.git"
-  Bundle "git://github.com/ervandew/supertab.git"
-  Bundle "git://github.com/tomtom/tcomment_vim.git"
-  Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
-  Bundle "git://github.com/vim-scripts/matchit.zip"
-  Bundle "git://github.com/kana/vim-textobj-user.git"
-  Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
   Bundle "git://github.com/tpope/vim-repeat.git"
+  Bundle "git://github.com/vim-ruby/vim-ruby.git"
+  Bundle "git://github.com/vim-scripts/L9.git"
+  Bundle "git://github.com/vim-scripts/matchit.zip"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
-  Bundle "git://github.com/tpope/vim-abolish.git"
+
+
+ " Vim airline configs 
+  Plugin 'bling/vim-airline'
+  let g:airline_powerline_fonts = 1
+  let g:airline_mode_map = {
+      \ '__' : '-',
+      \ 'n'  : 'N',
+      \ 'i'  : 'I',
+      \ 'R'  : 'R',
+      \ 'c'  : 'C',
+      \ 'v'  : 'V',
+      \ 'V'  : 'V',
+      \ '' : 'V',
+      \ 's'  : 'S',
+      \ 'S'  : 'S',
+      \ '' : 'S',
+      \ }
+
+" Easy motion config
+  Bundle "git://github.com/Lokaltog/vim-easymotion.git"
+  map  / <Plug>(easymotion-sn)
+  omap / <Plug>(easymotion-tn)
+  map  n <Plug>(easymotion-next)
+  map  N <Plug>(easymotion-prev)
+
+"Supertab code completion"
+  Bundle "git://github.com/ervandew/supertab.git"
+  let g:SuperTabContextDefaultCompletionType = "<c-n>"
+
 
 " Dash Searching"
   Bundle "git://github.com/rizzatti/funcoo.vim.git"
@@ -41,11 +68,6 @@
         \ }
     " respect the .gitignore
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
-
-" Compile and deploy Arduino (*.pde) sketches directly from Vim
-  Bundle "git://github.com/smerrill/vim-arduino.git"
-    au BufNewFile,BufRead *.pde set filetype=arduino
-    au BufNewFile,BufRead *.ino set filetype=arduino
 
 " Go
   Bundle "git://github.com/jnwhiteh/vim-golang.git"

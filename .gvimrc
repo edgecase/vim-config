@@ -26,14 +26,13 @@
     autocmd GUIEnter * set visualbell t_vb=
   endif
 
-" use a big, pretty font
-  set guifont=Monaco:h15
+" set default font
+  set guifont=Meslo\ LG\ S\ DZ\ Regular\ for\ Powerline:h15
 
 " initial window size
   set lines=45 columns=120
 
 " pretty but not terminal-compatible color scheme
-  set background=dark
-  colors twilight2
+  colorscheme codeschool
 
 runtime! custom_config/*.gvim

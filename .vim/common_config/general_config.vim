@@ -5,8 +5,7 @@
   syntax on
 
 " default color scheme
-  set background=dark
-  colorscheme wombat
+  set t_Co=256
 
 " don't wrap long lines
   set nowrap
