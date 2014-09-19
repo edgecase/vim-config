@@ -2,9 +2,7 @@
 " install plugins.
 
 " Plugins requiring no additional configuration or keymaps
-  Bundle "git://github.com/kana/vim-textobj-user.git"
   Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
-  Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
   Bundle "git://github.com/oscarh/vimerl.git"
   Bundle "git://github.com/pangloss/vim-javascript.git"
   Bundle "git://github.com/tomtom/tcomment_vim.git"
@@ -110,7 +108,6 @@
     map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
     map <Leader>. :TagbarToggle<CR>
 
-
 " Markdown syntax highlighting
   Bundle "git://github.com/tpope/vim-markdown.git"
     augroup mkd
@@ -118,12 +115,6 @@
       autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
       autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
     augroup END
-
-
-" Markdown preview to quickly preview markdown files
-  Bundle "git://github.com/maba/vim-markdown-preview.git"
-  map <buffer> <Leader>mp :Mm<CR>
-
 
 " NERDTree for project drawer
   Bundle "git://github.com/scrooloose/nerdtree.git"
@@ -178,19 +169,6 @@
                                \ 'passive_filetypes': ['haml','scss','sass'] }
 
 
-" gist-vim for quickly creating gists
-  Bundle "git://github.com/mattn/webapi-vim.git"
-  Bundle "git://github.com/mattn/gist-vim.git"
-    if has("mac")
-      let g:gist_clip_command = 'pbcopy'
-    elseif has("unix")
-      let g:gist_clip_command = 'xclip -selection clipboard'
-    endif
-
-    let g:gist_detect_filetype = 1
-    let g:gist_open_browser_after_post = 1
-
-
 " gundo for awesome undo tree visualization
   Bundle "git://github.com/sjl/gundo.vim.git"
     map <Leader>h :GundoToggle<CR>
@@ -225,9 +203,11 @@
   Bundle "git://github.com/amdt/vim-niji.git"
   autocmd BufNewFile,BufRead *.clj set filetype=clojure
   autocmd BufNewFile,BufRead *.edn set filetype=clojure
+  autocmd BufNewFile,BufRead *.cljs set filetype=clojure
+  autocmd BufNewFile,BufRead *.cljx set filetype=clojure
 
   let g:paredit_leader= '\'
-
+  let vimclojure#ParenRainbow  = 1
 
 " Jade Highlighting"
   Bundle "git://github.com/digitaltoad/vim-jade.git"
