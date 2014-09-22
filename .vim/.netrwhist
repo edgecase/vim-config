@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/felixflores/Projects/wedding-minder'
 let g:netrw_dirhist_2='/Users/felixflores/Projects/pairing-config'
+let g:netrw_dirhist_3='/Users/felixflores/.lein'
+let g:netrw_dirhist_4='/Users/felixflores/Projects/wedding-minder'

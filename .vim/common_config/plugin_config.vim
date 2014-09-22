@@ -16,7 +16,6 @@
   Bundle "git://github.com/vim-scripts/matchit.zip"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
 
-
  " Vim airline configs 
   Plugin 'bling/vim-airline'
   let g:airline_powerline_fonts = 1
