@@ -27,6 +27,7 @@
   endif
 
 " set default font
+" https://github.com/Lokaltog/powerline-fonts
   set guifont=Meslo\ LG\ S\ DZ\ Regular\ for\ Powerline:h15
 
 " initial window size
