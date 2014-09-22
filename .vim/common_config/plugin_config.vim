@@ -15,6 +15,7 @@
   Bundle "git://github.com/vim-scripts/L9.git"
   Bundle "git://github.com/vim-scripts/matchit.zip"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
+  Bundle "git://github.com/tpope/vim-abolish.git"
 
  " Vim airline configs 
   Plugin 'bling/vim-airline'
