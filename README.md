@@ -382,4 +382,6 @@ popular color themes](http://www.vi-improved.org/color_sampler_pack/):
 
 Use `:color vibrantink` to switch to a color scheme.
 
-
+## Font Requirement
+This vim configuration requires the Meslo font from
+[https://github.com/Lokaltog/powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
