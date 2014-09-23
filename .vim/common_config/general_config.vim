@@ -7,9 +7,6 @@
 " default color scheme
   set t_Co=256
 
-" transparency
-  set transparency=5
-
 " don't wrap long lines
   set nowrap
 
