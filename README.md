@@ -222,17 +222,6 @@ functionality to your vim projects.  You can learn more about it with
 **Customizations**:
 Use `gt` to toggle NERDTree
 
-## Ack.vim
-
-Ack.vim uses ack to search inside the current directory for a pattern.
-You can learn more about it with :help Ack
-
-**Customizations**:
-
-* `g/` to bring up `:Ack `.
-* `g*` to bring up an `:Ack -w` search with the word under cursor.
-
-
 ## Tabular
 
 Lets you align statements on their equal signs, make comment

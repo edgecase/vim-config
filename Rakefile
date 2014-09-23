@@ -11,8 +11,6 @@ WINDOW_FILES =
   { '.vimrc'           => '~/_vimrc',
     '.gvimrc'          => '~/_gvimrc',
     '.vim'             => '~/vimfiles',
-    'windows/ack.bat'  => 'c:\RailsInstaller\Git\cmd\ack.bat',
-    'windows/ack.pl'   => 'c:\RailsInstaller\Git\cmd\ack.pl',
     'windows/curl.cmd' => 'c:\RailsInstaller\Git\cmd\curl.cmd' }
 
 desc "Install vim configuration and plugin files"

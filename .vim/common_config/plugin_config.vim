@@ -2,30 +2,49 @@
 " install plugins.
 
 " Plugins requiring no additional configuration or keymaps
+  Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
   Bundle "git://github.com/oscarh/vimerl.git"
-  Bundle "git://github.com/tpope/vim-git.git"
-  Bundle "git://github.com/harleypig/vcscommand.vim.git"
-  Bundle "git://github.com/altercation/vim-colors-solarized.git"
-  Bundle "git://github.com/tpope/vim-cucumber.git"
+  Bundle "git://github.com/pangloss/vim-javascript.git"
+  Bundle "git://github.com/tomtom/tcomment_vim.git"
   Bundle "git://github.com/tpope/vim-endwise.git"
   Bundle "git://github.com/tpope/vim-fugitive.git"
   Bundle "git://github.com/tpope/vim-haml.git"
-  Bundle "git://github.com/pangloss/vim-javascript.git"
-  Bundle "git://github.com/vim-scripts/L9.git"
   Bundle "git://github.com/tpope/vim-rake.git"
-  Bundle "git://github.com/vim-ruby/vim-ruby.git"
-  Bundle "git://github.com/ervandew/supertab.git"
-  Bundle "git://github.com/tomtom/tcomment_vim.git"
-  Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
-  Bundle "git://github.com/vim-scripts/matchit.zip"
-  Bundle "git://github.com/kana/vim-textobj-user.git"
-  Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
   Bundle "git://github.com/tpope/vim-repeat.git"
+  Bundle "git://github.com/vim-ruby/vim-ruby.git"
+  Bundle "git://github.com/vim-scripts/L9.git"
+  Bundle "git://github.com/vim-scripts/matchit.zip"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
-  Bundle "git://github.com/wgibbs/vim-irblack.git"
-" Bundle "git://github.com/wavded/vim-stylus.git"
   Bundle "git://github.com/tpope/vim-abolish.git"
-  Bundle "git://github.com/christoomey/vim-tmux-navigator.git"
+
+ " Vim airline configs 
+  Plugin 'bling/vim-airline'
+  let g:airline_powerline_fonts = 1
+  let g:airline_mode_map = {
+      \ '__' : '-',
+      \ 'n'  : 'N',
+      \ 'i'  : 'I',
+      \ 'R'  : 'R',
+      \ 'c'  : 'C',
+      \ 'v'  : 'V',
+      \ 'V'  : 'V',
+      \ '' : 'V',
+      \ 's'  : 'S',
+      \ 'S'  : 'S',
+      \ '' : 'S',
+      \ }
+
+" Easy motion config
+  Bundle "git://github.com/Lokaltog/vim-easymotion.git"
+  map  / <Plug>(easymotion-sn)
+  omap / <Plug>(easymotion-tn)
+  map  n <Plug>(easymotion-next)
+  map  N <Plug>(easymotion-prev)
+
+"Supertab code completion"
+  Bundle "git://github.com/ervandew/supertab.git"
+  let g:SuperTabContextDefaultCompletionType = "<c-n>"
+
 
 " Dash Searching"
   Bundle "git://github.com/rizzatti/funcoo.vim.git"
@@ -47,11 +66,6 @@
         \ }
     " respect the .gitignore
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
-
-" Compile and deploy Arduino (*.pde) sketches directly from Vim
-  Bundle "git://github.com/smerrill/vim-arduino.git"
-    au BufNewFile,BufRead *.pde set filetype=arduino
-    au BufNewFile,BufRead *.ino set filetype=arduino
 
 " Go
   Bundle "git://github.com/jnwhiteh/vim-golang.git"
@@ -77,17 +91,6 @@
   Bundle "git://github.com/kchmck/vim-coffee-script.git"
     au BufNewFile,BufRead *.coffee set filetype=coffee
 
-
-" ACK
-" Bundle "git://github.com/mileszs/ack.vim.git"
-"   nmap g/ :Ack!<space>
-"   nmap g* :Ack! -w <C-R><C-W><space>
-"   nmap ga :AckAdd!<space>
-"   nmap gn :cnext<CR>
-"   nmap gp :cprev<CR>
-"   nmap gq :ccl<CR>
-"   nmap gl :cwindow<CR>
-
 " AG aka The Silver Searcher
   Bundle 'git://github.com/rking/ag.vim.git'
     nmap g/ :Ag!<space>
@@ -105,7 +108,6 @@
     map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
     map <Leader>. :TagbarToggle<CR>
 
-
 " Markdown syntax highlighting
   Bundle "git://github.com/tpope/vim-markdown.git"
     augroup mkd
@@ -113,12 +115,6 @@
       autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
       autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
     augroup END
-
-
-" Markdown preview to quickly preview markdown files
-  Bundle "git://github.com/maba/vim-markdown-preview.git"
-  map <buffer> <Leader>mp :Mm<CR>
-
 
 " NERDTree for project drawer
   Bundle "git://github.com/scrooloose/nerdtree.git"
@@ -173,19 +169,6 @@
                                \ 'passive_filetypes': ['haml','scss','sass'] }
 
 
-" gist-vim for quickly creating gists
-  Bundle "git://github.com/mattn/webapi-vim.git"
-  Bundle "git://github.com/mattn/gist-vim.git"
-    if has("mac")
-      let g:gist_clip_command = 'pbcopy'
-    elseif has("unix")
-      let g:gist_clip_command = 'xclip -selection clipboard'
-    endif
-
-    let g:gist_detect_filetype = 1
-    let g:gist_open_browser_after_post = 1
-
-
 " gundo for awesome undo tree visualization
   Bundle "git://github.com/sjl/gundo.vim.git"
     map <Leader>h :GundoToggle<CR>
@@ -220,9 +203,11 @@
   Bundle "git://github.com/amdt/vim-niji.git"
   autocmd BufNewFile,BufRead *.clj set filetype=clojure
   autocmd BufNewFile,BufRead *.edn set filetype=clojure
+  autocmd BufNewFile,BufRead *.cljs set filetype=clojure
+  autocmd BufNewFile,BufRead *.cljx set filetype=clojure
 
   let g:paredit_leader= '\'
-
+  let vimclojure#ParenRainbow  = 1
 
 " Jade Highlighting"
   Bundle "git://github.com/digitaltoad/vim-jade.git"
@@ -236,3 +221,4 @@
   Bundle "git://github.com/elixir-lang/vim-elixir.git"
     au BufNewFile,BufRead *.ex set filetype=elixir
     au BufNewFile,BufRead *.exs set filetype=elixir
+
