@@ -6,6 +6,10 @@ You should give it a try.
 
 This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim` installations that are built with all of the `vim` features necessary to support the used plugins.
 
+## Font Requirement
+This vim configuration requires the Meslo font from
+[https://github.com/Lokaltog/powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
+
 ## Attention Windows Users!
 
 If you are installing this config on Microsoft Windows, you must download and install the latest [RailsInstaller](http://www.railsinstaller.org/) package.  Go ahead and do it now.  I'll wait.
@@ -381,7 +385,3 @@ popular color themes](http://www.vi-improved.org/color_sampler_pack/):
 * xoria256
 
 Use `:color vibrantink` to switch to a color scheme.
-
-## Font Requirement
-This vim configuration requires the Meslo font from
-[https://github.com/Lokaltog/powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
