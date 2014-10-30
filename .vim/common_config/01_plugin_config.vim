@@ -53,17 +53,12 @@
     nmap <Leader>qa <Plug>DashGlobalSearch
 
 
-" CtrlP - with FuzzyFinder compatible keymaps
+" CtrlP
   Bundle "git://github.com/kien/ctrlp.vim.git"
     nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
     nnoremap <Leader>t :<C-U>CtrlP<CR>
     nnoremap <Leader>T :<C-U>CtrlPTag<CR>
-    let g:ctrlp_prompt_mappings = {
-        \ 'PrtSelectMove("j")':   ['<down>'],
-        \ 'PrtSelectMove("k")':   ['<up>'],
-        \ 'AcceptSelection("h")': ['<c-j>'],
-        \ 'AcceptSelection("v")': ['<c-k>', '<RightMouse>'],
-        \ }
+
     " respect the .gitignore
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
