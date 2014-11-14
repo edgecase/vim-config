@@ -36,10 +36,6 @@
 
 " Easy motion config
   Bundle "git://github.com/Lokaltog/vim-easymotion.git"
-  map  / <Plug>(easymotion-sn)
-  omap / <Plug>(easymotion-tn)
-  map  n <Plug>(easymotion-next)
-  map  N <Plug>(easymotion-prev)
 
 "Supertab code completion"
   Bundle "git://github.com/ervandew/supertab.git"
