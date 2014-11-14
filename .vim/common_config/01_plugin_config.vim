@@ -119,9 +119,8 @@
 " NERDTree for project drawer
   Bundle "git://github.com/scrooloose/nerdtree.git"
     let NERDTreeHijackNetrw = 0
-
-    nmap gt :NERDTreeToggle<CR>
-    nmap g :NERDTree \| NERDTreeToggle \| NERDTreeFind<CR>
+    nmap <leader>g :NERDTreeToggle<CR>
+    nmap <leader>G :NERDTreeFind<CR>
 
 
 " Tabular for aligning text
