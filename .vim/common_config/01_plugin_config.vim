@@ -36,10 +36,6 @@
 
 " Easy motion config
   Bundle "git://github.com/Lokaltog/vim-easymotion.git"
-  map  / <Plug>(easymotion-sn)
-  omap / <Plug>(easymotion-tn)
-  map  n <Plug>(easymotion-next)
-  map  N <Plug>(easymotion-prev)
 
 "Supertab code completion"
   Bundle "git://github.com/ervandew/supertab.git"
@@ -53,17 +49,12 @@
     nmap <Leader>qa <Plug>DashGlobalSearch
 
 
-" CtrlP - with FuzzyFinder compatible keymaps
+" CtrlP
   Bundle "git://github.com/kien/ctrlp.vim.git"
     nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
     nnoremap <Leader>t :<C-U>CtrlP<CR>
     nnoremap <Leader>T :<C-U>CtrlPTag<CR>
-    let g:ctrlp_prompt_mappings = {
-        \ 'PrtSelectMove("j")':   ['<down>'],
-        \ 'PrtSelectMove("k")':   ['<up>'],
-        \ 'AcceptSelection("h")': ['<c-j>'],
-        \ 'AcceptSelection("v")': ['<c-k>', '<RightMouse>'],
-        \ }
+
     " respect the .gitignore
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
@@ -119,9 +110,8 @@
 " NERDTree for project drawer
   Bundle "git://github.com/scrooloose/nerdtree.git"
     let NERDTreeHijackNetrw = 0
-
-    nmap gt :NERDTreeToggle<CR>
-    nmap g :NERDTree \| NERDTreeToggle \| NERDTreeFind<CR>
+    nmap <leader>g :NERDTreeToggle<CR>
+    nmap <leader>G :NERDTreeFind<CR>
 
 
 " Tabular for aligning text
@@ -222,6 +212,9 @@
     au BufNewFile,BufRead *.ex set filetype=elixir
     au BufNewFile,BufRead *.exs set filetype=elixir
 
+" Rust!
+  Plugin 'wting/rust.vim'
+
 " Easy async RSpec running
   Bundle 'thoughtbot/vim-rspec'
   Bundle "git://github.com/tpope/vim-dispatch.git"
@@ -230,4 +223,3 @@
   nmap <Leader>rn :wa<CR> :call RunNearestSpec()<CR>
   nmap <Leader>rl :wa<CR> :call RunLastSpec()<CR>
   nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
-

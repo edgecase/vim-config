@@ -385,3 +385,10 @@ popular color themes](http://www.vi-improved.org/color_sampler_pack/):
 * xoria256
 
 Use `:color vibrantink` to switch to a color scheme.
+
+## Contributing
+
+If you are going to contribute to our config, please make sure you are not overriding any common defaults.
+Also remember that we have a custom_config directory if you want to make a change for just yourself.
+
+All PRs **must** be reviewed by at least one other person before being merged.
