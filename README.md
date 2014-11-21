@@ -386,6 +386,21 @@ popular color themes](http://www.vi-improved.org/color_sampler_pack/):
 
 Use `:color vibrantink` to switch to a color scheme.
 
+## Searching with VIM
+
+We have a shortcut to search the entire current working directory for a given query.
+
+`g/` will result in `:Ack! ` and you type in your query
+`g*` will result in `:Ack! <word>` depending on the location of your cursor.
+
+For example, if I place my cursor on the word "foo" then type `g*` it will return `:Ack! -w foo`
+
+This search functionality might not work until you install Ack or Ag. You can install these easily with brew.
+
+## Powerline Fonts
+
+If you would like to use powerline fonts for vim and you use iTerm, make sure to set your Non ASCII Font in the iTerm settings.
+
 ## Contributing
 
 If you are going to contribute to our config, please make sure you are not overriding any common defaults.
