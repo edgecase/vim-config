@@ -26,8 +26,8 @@ Windows users: be sure to use **RailsInstaller** > **Command Prompt with Ruby an
 2. `cd vim-config`
 3. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
 4. `vim` (or in Windows: `gvim`)
-5. `:BundleClean` (if you have previously used this Neo Vim config)
-6. `:BundleInstall` (This will clone and install all of the plugins from github.)
+5. `:NeoBundleClean` (if you have previously used this Neo Vim config)
+6. `:NeoBundleInstall` (This will clone and install all of the plugins from github.)
 
 ## Customizing
 
@@ -36,7 +36,7 @@ Customizations can be added to the folder `.vim/custom_config/`.
 * Any files with a `.vim` extension in that folder will be loaded when running all versions of `vim`.
 * Any files with a `.gvim` extension in that folder will be loaded when running a graphical version of `vim`.
 
-You can add custom plugins by registering them in a `.vim` file in the custom_config folder with the same `Bundle "plugin-repo-url"`
+You can add custom plugins by registering them in a `.vim` file in the custom_config folder with the same `NeoBundle "plugin-repo-url"`
 syntax used in the `.vim/common_config/plugin_config.vim`, and then performing steps 3 & 4 from the install steps above.
 
 Common practice is to symlink a folder containing your custom configuration files as the `.vim/custom_config` folder.
