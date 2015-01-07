@@ -224,7 +224,7 @@ functionality to your vim projects.  You can learn more about it with
 `:help NERDTree`.
 
 **Customizations**:
-Use `gt` to toggle NERDTree
+Use `<leader>g` to toggle NERDTree
 
 ## Tabular
 
