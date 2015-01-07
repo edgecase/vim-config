@@ -31,10 +31,12 @@ Windows users: be sure to use **RailsInstaller** > **Command Prompt with Ruby an
 
 ## Customizing
 
-Customizations can be added to the folder `.vim/custom_config/`.
+Customizations can be added to the folder `.vim/custom_preconfig/` or `.vim/custom_config/`
 
 * Any files with a `.vim` extension in that folder will be loaded when running all versions of `vim`.
 * Any files with a `.gvim` extension in that folder will be loaded when running a graphical version of `vim`.
+
+The custom_preconfig settings are loaded prior to the common config. A common usecase for this is to reset mapleader.  Most of the rest of the customizations are placed in custom_config.
 
 You can add custom plugins by registering them in a `.vim` file in the custom_config folder with the same `NeoBundle "plugin-repo-url"`
 syntax used in the `.vim/common_config/plugin_config.vim`, and then performing steps 3 & 4 from the install steps above.
