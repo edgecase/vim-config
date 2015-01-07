@@ -8,9 +8,6 @@
   set guioptions-=r
   set guioptions-=L
 
-" transparency
-  set transparency=5
-
 " go full screen like you mean it
   if has('win32')
     au GUIEnter * simalt ~x
