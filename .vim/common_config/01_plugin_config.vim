@@ -222,8 +222,8 @@
  call neobundle#end()
 
 " Easy async RSpec running
-  Bundle 'thoughtbot/vim-rspec'
-  Bundle "git://github.com/tpope/vim-dispatch.git"
+  NeoBundle 'thoughtbot/vim-rspec'
+  NeoBundle "git://github.com/tpope/vim-dispatch.git"
   let g:rspec_command = "Dispatch rspec --format=progress --no-profile {spec}"
   nmap <Leader>rc :wa<CR> :call RunCurrentSpecFile()<CR>
   nmap <Leader>rn :wa<CR> :call RunNearestSpec()<CR>
