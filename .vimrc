@@ -1,5 +1,4 @@
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
+set rtp+=~/.vim/bundle/neobundle.vim/
 
 runtime! common_config/*.vim
 runtime! custom_config/*.vim
