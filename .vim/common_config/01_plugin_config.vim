@@ -217,9 +217,7 @@
     au BufNewFile,BufRead *.exs set filetype=elixir
 
 " Rust!
-  NeoBundle 'git://github.com/bling/vim-airline.git'
-
- call neobundle#end()
+  NeoBundle 'git://github.com/wting/rust.vim.git'
 
 " Easy async RSpec running
   NeoBundle 'thoughtbot/vim-rspec'
@@ -229,3 +227,5 @@
   nmap <Leader>rn :wa<CR> :call RunNearestSpec()<CR>
   nmap <Leader>rl :wa<CR> :call RunLastSpec()<CR>
   nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
+
+ call neobundle#end()
