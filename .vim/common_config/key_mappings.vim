@@ -1,12 +1,6 @@
-" get out of insert mode with cmd-i
-  imap <D-i> <Esc>
-
 " easy wrap toggling
   nmap <Leader>w :set wrap!<cr>
   nmap <Leader>W :set nowrap<cr>
-
-" shortcut to save all
-  nmap <Leader>ss :wa<cr>
 
 " close all other windows (in the current tab)
   nmap gW :only<cr>
@@ -17,6 +11,7 @@
 " shortcuts for frequenly used files
   nmap gs :e db/schema.rb<cr>
   nmap gr :e config/routes.rb<cr>
+  nmap gm :e Gemfile<cr>
 
 " insert blank lines without going into insert mode
   nmap go o<esc>
@@ -28,14 +23,6 @@
   nmap <C-H> <C-W>h
   nmap <C-L> <C-W>l
 
-" shortcut for =>
-  imap <C-l> <Space>=><Space>
-
-" handy macro expansion
-  iabbrev Lidsa Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-  iabbrev rdebug require 'ruby-debug'; Debugger.start; Debugger.settings[:autoeval] = 1; Debugger.settings[:autolist] = 1; debugger; 0;
-  abbrev hte the
-
 " Yank from the cursor to the end of the line, to be consistent with C and D.
   nnoremap Y y$
 
@@ -43,7 +30,7 @@
   nnoremap vv `[V`]
 
 " clean up trailing whitespace
-  map <Leader>c :%s/\s\+$<cr>
+  map <Leader>c :StripTrailingWhitespaces<cr>
 
 " compress excess whitespace on current line
   map <Leader>e :s/\v(\S+)\s+/\1 /<cr>:nohl<cr>
@@ -53,10 +40,6 @@
 
 " map spacebar to clear search highlight
   nnoremap <Leader><space> :noh<cr>
-
-" make tab key match bracket pairs
-  nnoremap <tab> %
-  vnoremap <tab> %
 
 " buffer resizing mappings (shift + arrow key)
   nnoremap <S-Up> <c-w>+

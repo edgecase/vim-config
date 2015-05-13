@@ -5,8 +5,7 @@
   syntax on
 
 " default color scheme
-  set background=dark
-  color twilight2
+  set t_Co=256
 
 " don't wrap long lines
   set nowrap
@@ -107,6 +106,3 @@
 
 " JSON is JS
   au BufNewFile,BufRead *.json set ai filetype=javascript
-
-" different color for each paren pairs
-let vimclojure#ParenRainbow  = 1
