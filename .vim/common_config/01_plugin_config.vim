@@ -228,4 +228,17 @@
   nmap <Leader>rl :wa<CR> :call RunLastSpec()<CR>
   nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
 
+" Elm support -- https://elm-lang.org
+  NeoBundle "git://github.com/lambdatoast/elm.vim"
+  " Compilation
+  nmap <Leader>em :w<CR> :ElmMakeCurrentFile<CR>
+  nmap <Leader>emm :wa<CR> :ElmMakeMain<CR>
+
+  " Evaluation
+  nmap <Leader>el :w<CR> :ElmEvalLine<CR>
+  vmap <Leader>es :w<CR> :<C-u>ElmEvalSelection<CR>
+
+  " REPL
+  nmap <Leader>er :w<CR> :call ElmRepl()<CR>
+
  call neobundle#end()

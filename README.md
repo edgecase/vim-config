@@ -371,6 +371,10 @@ Ships with a few additional syntaxes:
 * Coffee Script
 * Erlang
 * Jade
+* Go
+* Elixir
+* Rust
+* Elm
 
 ## Color schemes
 
