@@ -165,6 +165,11 @@
                                \ 'active_filetypes': [],
                                \ 'passive_filetypes': ['haml','scss','sass'] }
 
+" Write Good
+  Bundle 'bnbeckwith/vim-writegood'
+  " nnoremap <C-w> :WritegoodToggle<CR>
+  " let g:writegood_user_weasel_words = ["emacs"]
+
 
 " gundo for awesome undo tree visualization
   NeoBundle "sjl/gundo.vim"
