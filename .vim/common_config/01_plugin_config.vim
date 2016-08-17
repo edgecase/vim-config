@@ -110,6 +110,10 @@
       autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
     augroup END
 
+" TOML
+  Bundle 'cespare/vim-toml'
+  autocmd BufNewFile,BufRead *.toml set ai formatoptions=tcroqn2 filetype=toml
+
 " NERDTree for project drawer
   NeoBundle "scrooloose/nerdtree"
     let NERDTreeHijackNetrw = 0
