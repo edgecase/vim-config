@@ -375,6 +375,7 @@ Ships with a few additional syntaxes:
 * Elixir
 * Rust
 * Elm
+* TypeScript
 
 ## Color schemes
 

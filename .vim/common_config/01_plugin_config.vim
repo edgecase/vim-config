@@ -20,6 +20,7 @@
   NeoBundle "vim-scripts/matchit.zip"
   NeoBundle "vim-scripts/ruby-matchit"
   NeoBundle "tpope/vim-abolish"
+  NeoBundle "leafgarland/typescript-vim"
 
  " Vim airline configs
   NeoBundle 'bling/vim-airline'
