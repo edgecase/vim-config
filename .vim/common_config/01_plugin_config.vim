@@ -241,4 +241,8 @@
   " REPL
   nmap <Leader>er :w<CR> :call ElmRepl()<CR>
 
+" React JSX support
+  NeoBundle "mxw/vim-jsx"
+  let g:jsx_ext_required = 0
+
  call neobundle#end()
