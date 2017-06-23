@@ -9,6 +9,7 @@
   NeoBundle "michaeljsmith/vim-indent-object"
   NeoBundle "oscarh/vimerl"
   NeoBundle "pangloss/vim-javascript"
+  NeoBundle "mxw/vim-jsx"
   NeoBundle "tomtom/tcomment_vim"
   NeoBundle "tpope/vim-endwise"
   NeoBundle "tpope/vim-fugitive"
