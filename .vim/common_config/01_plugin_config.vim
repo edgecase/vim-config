@@ -245,4 +245,7 @@
   NeoBundle "mxw/vim-jsx"
   let g:jsx_ext_required = 0
 
+" Vue Single File Component support
+  NeoBundle "posva/vim-vue"
+  
  call neobundle#end()
