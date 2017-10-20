@@ -26,15 +26,8 @@
     autocmd GUIEnter * set visualbell t_vb=
   endif
 
-" set default font
-" https://github.com/Lokaltog/powerline-fonts
-  set guifont=Meslo\ LG\ S\ DZ\ Regular\ for\ Powerline:h15
-
 " initial window size
   set lines=45 columns=120
-
-" pretty but not terminal-compatible color scheme
-  colorscheme codeschool
 
 runtime! custom_config/*.gvim
 

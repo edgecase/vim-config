@@ -8,7 +8,7 @@
 " go to the alternate file (previous buffer) with g-enter
   nmap g 
 
-" shortcuts for frequenly used files
+" shortcuts for frequency used files
   nmap gs :e db/schema.rb<cr>
   nmap gr :e config/routes.rb<cr>
   nmap gm :e Gemfile<cr>
@@ -35,8 +35,10 @@
 " compress excess whitespace on current line
   map <Leader>e :s/\v(\S+)\s+/\1 /<cr>:nohl<cr>
 
+" use bufkill-vim to delete the buffer without closing the window
+  map <Leader>d :BD
 " delete all buffers
-  map <Leader>d :bufdo bd<cr>
+  map <Leader>D :bufdo bd<cr>
 
 " map spacebar to clear search highlight
   nnoremap <Leader><space> :noh<cr>
@@ -53,3 +55,13 @@
 " insert the path of currently edited file into a command
 " Command mode: Ctrl-P
   cmap <C-S-P> <C-R>=expand("%:p:h") . "/" <cr>
+
+" Turn off linewise keys. Normally, the `j' and `k' keys move the cursor down one entire line. With
+" line wrapping on, this can cause the cursor to actually skip a few lines on the screen because
+" it's moving from line N to line N+1 in the file. I want this to act more visually -- I want `down'
+" to mean the next line on the screen
+nmap j gj
+nmap k gk
+
+" Quickly fix spelling errors choosing the first result
+nmap <Leader>z z=1<CR><CR>

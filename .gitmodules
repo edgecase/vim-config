@@ -16,3 +16,84 @@
 [submodule ".vim/pack/plugins/fzf.vim"]
 	path = .vim/pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule ".vim/pack/plugins/start/nerdtree"]
+	path = .vim/pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule ".vim/pack/languages/vim-polyglot"]
+	path = .vim/pack/languages/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule ".vim/pack/plugins/start/ack.vim"]
+	path = .vim/pack/plugins/start/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule ".vim/pack/plugins/start/vim-commentary"]
+	path = .vim/pack/plugins/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule ".vim/pack/plugins/start/vim-endwise"]
+	path = .vim/pack/plugins/start/vim-endwise
+	url = https://github.com/tpope/vim-endwise
+[submodule ".vim/pack/plugins/start/vim-fugitive"]
+	path = .vim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/pack/plugins/start/vim-projectionist"]
+	path = .vim/pack/plugins/start/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist
+[submodule ".vim/pack/plugins/opt/vim-rake"]
+	path = .vim/pack/plugins/opt/vim-rake
+	url = https://github.com/tpope/vim-rake
+[submodule ".vim/pack/plugins/start/vim-repeat"]
+	path = .vim/pack/plugins/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule ".vim/pack/plugins/start/vim-abolish"]
+	path = .vim/pack/plugins/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish
+[submodule ".vim/pack/plugins/opt/vim-easymotion"]
+	path = .vim/pack/plugins/opt/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion
+[submodule ".vim/pack/plugins/opt/vim-airline"]
+	path = .vim/pack/plugins/opt/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule ".vim/pack/plugins/start/goyo.vim"]
+	path = .vim/pack/plugins/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
+[submodule ".vim/pack/plugins/start/vim-writegood"]
+	path = .vim/pack/plugins/start/vim-writegood
+	url = https://github.com/bnbeckwith/vim-writegood
+[submodule ".vim/pack/plugins/start/ale"]
+	path = .vim/pack/plugins/start/ale
+	url = https://github.com/w0rp/ale
+[submodule ".vim/pack/plugins/opt/vim-surround"]
+	path = .vim/pack/plugins/opt/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/pack/plugins/start/vim-bufkill"]
+	path = .vim/pack/plugins/start/vim-bufkill
+	url = https://github.com/qpkorr/vim-bufkill
+[submodule ".vim/pack/plugins/start/vim-rails"]
+	path = .vim/pack/plugins/opt/vim-rails
+	url = https://github.com/tpope/vim-rails
+[submodule ".vim/pack/plugins/opt/vim-bundler"]
+	path = .vim/pack/plugins/opt/vim-bundler
+	url = https://github.com/tpope/vim-bundler
+[submodule ".vim/pack/plugins/start/vim-dispatch"]
+	path = .vim/pack/plugins/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule ".vim/pack/plugins/start/vim-sleuth"]
+	path = .vim/pack/plugins/start/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth
+[submodule ".vim/pack/plugins/opt/gundo.vim"]
+	path = .vim/pack/plugins/opt/gundo.vim
+	url = https://github.com/sjl/gundo.vim
+[submodule ".vim/pack/plugins/opt/vim-fireplace"]
+	path = .vim/pack/plugins/opt/vim-fireplace
+	url = https://github.com/tpope/vim-fireplace
+[submodule ".vim/pack/plugins/opt/vim-classpath"]
+	path = .vim/pack/plugins/opt/vim-classpath
+	url = https://github.com/tpope/vim-classpath
+[submodule ".vim/pack/plugins/opt/paredit.vim"]
+	path = .vim/pack/plugins/opt/paredit.vim
+	url = https://github.com/vim-scripts/paredit.vim
+[submodule ".vim/pack/plugins/start/splitjoin.vim"]
+	path = .vim/pack/plugins/start/splitjoin.vim
+	url = https://github.com/andrewradev/splitjoin.vim
+[submodule ".vim/pack/plugins/opt/rainbow"]
+	path = .vim/pack/plugins/opt/rainbow
+	url = https://github.com/luochen1990/rainbow
