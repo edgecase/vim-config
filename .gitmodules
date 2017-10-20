@@ -14,5 +14,5 @@
 	path = .vim/pack/colors/opt/papercolor-theme
 	url = https://github.com/nlknguyen/papercolor-theme
 [submodule ".vim/pack/plugins/fzf.vim"]
-	path = .vim/pack/plugins/opt/fzf.vim
+	path = .vim/pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
