@@ -1,0 +1,15 @@
+[submodule ".vim/pack/colors/opt/molokai"]
+	path = .vim/pack/colors/opt/molokai
+	url = https://github.com/tomasr/molokai
+[submodule ".vim/pack/colors/opt/vim-colors-solarized"]
+	path = .vim/pack/colors/opt/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule ".vim/pack/colors/opt/gruvbox"]
+	path = .vim/pack/colors/opt/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule ".vim/pack/colors/opt/onedark.vim"]
+	path = .vim/pack/colors/opt/onedark.vim
+	url = https://github.com/joshdick/onedark.vim
+[submodule ".vim/pack/colors/opt/papercolor-theme"]
+	path = .vim/pack/colors/opt/papercolor-theme
+	url = https://github.com/nlknguyen/papercolor-theme
