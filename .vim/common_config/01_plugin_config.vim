@@ -160,7 +160,7 @@
     " syntastic is too slow for haml and sass
     let g:syntastic_mode_map = { 'mode': 'active',
                                \ 'active_filetypes': [],
-                               \ 'passive_filetypes': ['haml','scss','sass'] }
+                               \ 'passive_filetypes': ['haml','scss','sass','vue'] }
 
 
 " gundo for awesome undo tree visualization
@@ -245,4 +245,7 @@
   NeoBundle "mxw/vim-jsx"
   let g:jsx_ext_required = 0
 
+" Vue Single File Component support
+  NeoBundle "posva/vim-vue"
+  
  call neobundle#end()
