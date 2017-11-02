@@ -66,10 +66,6 @@ endif
 " - vim-easytags
 " - UltiSnips
 " - YouCompleteMe
-
-" "Supertab code completion"
-"   NeoBundle "ervandew/supertab"
-"   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 "
 "
 " " Dash Searching"

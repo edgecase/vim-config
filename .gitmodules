@@ -97,3 +97,6 @@
 [submodule ".vim/pack/plugins/opt/rainbow"]
 	path = .vim/pack/plugins/opt/rainbow
 	url = https://github.com/luochen1990/rainbow
+[submodule ".vim/pack/plugins/opt/supertab"]
+	path = .vim/pack/plugins/start/supertab
+	url = https://github.com/ervandew/supertab
