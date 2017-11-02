@@ -70,7 +70,7 @@
       return ''
     endif
   endfunction
-  set statusline=[%n]\ %<%.99f\ %h%w%m%r%{ETry('CapsLockStatusline')}%y%{ETry('rails#statusline')}%{ETry('fugitive#statusline')}%#ErrorMsg#%*%=%-16(\ %l,%c-%v\ %)%P
+  set statusline=[%n]\ %<%.99f\ %h%w%m%r%{ETry('CapsLockStatusline')}%y%{ETry('gutentags#statusline')}%#ErrorMsg#%*%=%-16(\ %l,%c-%v\ %)%P
 
 " When lines are cropped at the screen bottom, show as much as possible
   set display=lastline

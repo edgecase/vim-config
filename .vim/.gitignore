@@ -1,2 +1,4 @@
 bundle/
 vundle.git/
+tags.lock
+tags.temp

@@ -1,3 +1,5 @@
 .vim/custom_config
 .vim/custom_preconfig
 .vim/.netrwhist
+tags.lock
+tags.temp

@@ -56,6 +56,7 @@ if exists(':ElmRepl')
   nmap <Leader>er :w<CR> :call ElmRepl()<CR>
 endif
 
+packadd! vim-gutentags
 
 " TO RE-REVIEW:
 " - matchit
