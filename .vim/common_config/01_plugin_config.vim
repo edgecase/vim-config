@@ -229,17 +229,23 @@
   nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
 
 " Elm support -- https://elm-lang.org
-  NeoBundle "lambdatoast/elm.vim"
+  NeoBundle "ElmCast/elm-vim"
+  " Disable provided keybindings
+  let g:elm_setup_keybindings = 0
+  " Format on save (needs elm-format installed)
+  let g:elm_format_autosave = 1
   " Compilation
-  nmap <Leader>em :w<CR> :ElmMakeCurrentFile<CR>
-  nmap <Leader>emm :wa<CR> :ElmMakeMain<CR>
-
-  " Evaluation
-  nmap <Leader>el :w<CR> :ElmEvalLine<CR>
-  vmap <Leader>es :w<CR> :<C-u>ElmEvalSelection<CR>
-
+  nmap <Leader>em <Plug>(elm-make)
+  nmap <Leader>eb <Plug>(elm-make-main)
+  nmap <Leader>ee <Plug>(elm-error-detail)
+  " Test
+  nmap <Leader>et <Plug>(elm-test)
   " REPL
-  nmap <Leader>er :w<CR> :call ElmRepl()<CR>
+  nmap <Leader>er <Plug>(elm-repl)
+  " Docs
+  nmap <Leader>ed <Plug>(elm-show-docs)
+  nmap <Leader>ew <Plug>(elm-browse-docs)
+
 
 " React JSX support
   NeoBundle "mxw/vim-jsx"
