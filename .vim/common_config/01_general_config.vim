@@ -70,7 +70,7 @@
       return ''
     endif
   endfunction
-  set statusline=[%n]\ %<%.99f\ %h%w%m%r%{ETry('CapsLockStatusline')}%y%{ETry('gutentags#statusline')}%#ErrorMsg#%*%=%-16(\ %l,%c-%v\ %)%P
+  set statusline=[%n]\ %<%.99f\ %h%w%m%r%{ETry('CapsLockStatusline')}%y%{coc#status()}%#ErrorMsg#%*%=%-16(\ %l,%c-%v\ %)%P
 
 " When lines are cropped at the screen bottom, show as much as possible
   set display=lastline
@@ -98,11 +98,32 @@
 " allow lots of tabs
   set tabpagemax=20
 
-" remember last position in file
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+" font
+set guifont=Monaco:h13
+set background=light
 
-" Thorfile, Rakefile, Vagrantfile, and Gemfile are Ruby
-  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+" show whitespace characters
+set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+ ",eol:¬
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
 
-" JSON is JS
-  au BufNewFile,BufRead *.json set ai filetype=javascript
+" native file finding
+set path+=**
+set wildmenu
+set wildignore+=**/node_modules/**,**/deps/**,**/_build/**,**/target/**
+
+" netrw config
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 30
+let g:netrw_banner = 0
+let g:netrw_list_hide = &wildignore
+
+set grepprg=rg\ --vimgrep
+
+" base16 config
+" if filereadable(expand("~/.vimrc_background"))
+"   let base16colorspace=256
+"   source ~/.vimrc_background
+" endif

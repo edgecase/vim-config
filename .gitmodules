@@ -103,3 +103,18 @@
 [submodule ".vim/pack/plugins/opt/vim-gutentags"]
 	path = .vim/pack/plugins/opt/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags
+[submodule ".vim/pack/colors/start/gruvbox8"]
+	path = .vim/pack/colors/start/gruvbox8
+	url = https://github.com/lifepillar/vim-gruvbox8
+[submodule ".vim/pack/languages/start/vim-elixir"]
+	path = .vim/pack/languages/start/vim-elixir
+	url = https://github.com/elixir-editors/vim-elixir
+[submodule ".vim/pack/plugins/opt/traces.vim"]
+	path = .vim/pack/plugins/opt/traces.vim
+	url = https://github.com/markonm/traces.vim
+[submodule ".vim/pack/plugins/opt/vim-peekaboo"]
+	path = .vim/pack/plugins/opt/vim-peekaboo
+	url = https://github.com/junegunn/vim-peekaboo
+[submodule ".vim/pack/plugins/opt/argtextobj.vim"]
+	path = .vim/pack/plugins/opt/argtextobj.vim
+	url = https://github.com/vim-scripts/argtextobj.vim

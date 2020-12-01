@@ -1,0 +1,11 @@
+{
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+  "codeLens.enable": true,
+  "languageserver": {
+     "elixirLS": {
+       "enabled": false,
+       "command": "~/.elixir-ls/release/language_server.sh",
+       "filetypes": ["elixir", "eelixir"]
+     }
+  }
+}
